@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Home Justice Solutions</title>
+  <meta name="description" content="Learn more about Home Justice Solutions, a UK service helping council and housing association tenants claim free repairs and compensation for housing disrepair.">
+  <meta name="keywords" content="housing disrepair help, council tenant claims, mould repairs, landlord neglect, Home Justice Solutions about">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #7a5cf2, #9f5de5);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .banner {
+      background: #ffffff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .site-name {
+      color: #5b32c7;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .btn-menu {
+      margin-top: 10px;
+      background: #5b32c7;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+    }
+
+    .btn-menu:hover {
+      background: #4b28ac;
+    }
+
+    .menu-content {
+      display: none;
+      flex-direction: column;
+      background: #ffffff;
+      padding: 12px;
+      margin: 0 auto;
+      margin-top: 8px;
+      width: fit-content;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    }
+
+    .menu-section {
+      padding: 10px 0;
+      border-top: 1px solid #ccc;
+    }
+
+    .menu-section h4 {
+      font-size: 15px;
+      margin: 0 0 6px 12px;
+      color: #5b32c7;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    .menu-content a {
+      display: block;
+      color: #333;
+      text-decoration: none;
+      padding: 6px 12px;
+      font-size: 15px;
+    }
+
+    .menu-content a:hover {
+      background: #f0f0f0;
+      text-decoration: underline;
+    }
+
+    .menu-cta {
+      background: #2ed3d3;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 14px auto;
+      border-radius: 6px;
+      width: 240px;
+      font-size: 16px;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+      transition: background 0.3s ease;
+    }
+
+    .menu-cta:hover {
+      background: #1fcaca;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #ffffff;
+      color: #5b32c7;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+    }
+
+    h1, h2 {
+      color: #5b32c7;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuContent");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+
+    window.addEventListener("click", function(e) {
+      const menu = document.getElementById("menuContent");
+      const btn = document.getElementById("menuButton");
+      if (!menu.contains(e.target) && e.target !== btn) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="top-bar">
+      <img src="logo-home-justice.png.jpg" alt="Home Justice Solutions Logo" class="logo" style="max-width: 150px; height: auto;" />
+      <div class="site-name">Home Justice Solutions</div>
+    </div>
+  </div>
+
+  <div style="text-align: center;">
+    <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+  </div>
+
+  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
+
+  <div class="menu-content" id="menuContent">
+    <div class="menu-section">
+      <h4>Navigation</h4>
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="claim-types.html">Claim Types</a>
+      <a href="tenant-rights.html">Your Rights</a>
+      <a href="faq.html">FAQs</a>
+      <a href="search-your-council.html">Find Your Council</a>
+      <a href="https://form.jotform.com/250594347028056">Start a Claim</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <h1>About Home Justice Solutions</h1>
+      <p>At <strong>Home Justice Solutions</strong>, we believe every tenant deserves a safe, secure and habitable home. That’s why we work with tenants across the UK to help them get <strong>free repairs</strong> and <strong>compensation</strong> for housing disrepair — including mould, leaks, damp, and heating issues.</p>
+      <p>Whether you rent from the <a href="claim-types.html">council or a housing association</a>, if your landlord hasn’t resolved reported issues, we’re here to help you take action quickly and easily.</p>
+    </div>
+    <div class="section">
+      <h2>Who We Help</h2>
+      <p>We support <strong>council tenants</strong> and <strong>housing association tenants</strong> throughout England, Wales and Scotland. No matter where you’re based, if your landlord has failed to fix key issues in your home, we can help you explore a claim — <strong>at no cost to you</strong>.</p>
+      <p>We also work with people affected by:</p>
+      <ul>
+        <li>Persistent black mould and condensation</li>
+        <li>Leaks and flooding</li>
+        <li>Structural disrepair (walls, ceilings, stairs)</li>
+        <li>Rodents, pests, damp and unsafe electrics</li>
+        <li>Lack of heating or broken boiler</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Why Use Us?</h2>
+      <ul>
+        <li>✅ No phone calls or appointments – fast online form</li>
+        <li>✅ Free to check if you qualify in 60 seconds</li>
+        <li>✅ No win, no fee housing disrepair solicitors</li>
+        <li>✅ We only connect you with <strong>regulated legal professionals</strong></li>
+      </ul>
+      <p>We are not a law firm – we help you connect with professionals who handle disrepair claims every day, giving you the best chance of success without stress.</p>
+    </div>
+
+    <div class="section">
+      <h2>Start Your Claim Today</h2>
+      <p>If your landlord has ignored repair requests, you're not alone — and you're not powerless. Our process is simple:</p>
+      <ol>
+        <li><strong>Fill in our short form</strong></li>
+        <li><strong>We check if you qualify</strong></li>
+        <li><strong>You’re connected to a housing disrepair specialist</strong></li>
+      </ol>
+      <p><a href="how-it-works.html">Learn how it works</a> or get started instantly:</p>
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
+    </div>
+  </div> <!-- end container -->
+
+  <footer>
+    © 2025 Home Justice Solutions. All rights reserved.<br />
+    We are not a firm of solicitors. We connect tenants with housing disrepair specialists. This website does not provide legal advice.
+  </footer>
+
+</body>
+</html>
