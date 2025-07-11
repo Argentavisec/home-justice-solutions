@@ -1,78 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url><loc>https://freshstartdebtsupport.co.uk/index.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/what-we-do.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/privacy.html</loc></url>
 
-  <!-- Homepage -->
-  <url>
-    <loc>https://home-justice-solutions.co.uk/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
-  </url>
+  <!-- Debt Solutions -->
+  <url><loc>https://freshstartdebtsupport.co.uk/iva.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/dmp.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/dro.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/compare-solutions.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/debt-calculator.html</loc></url>
 
-  <!-- Main Pages -->
-  <url>
-    <loc>https://home-justice-solutions.co.uk/about-us.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/how-it-works.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/claim-types.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/tenant-rights.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/faq.html</loc>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/search-your-council.html</loc>
-    <priority>0.9</priority>
-  </url>
+  <!-- Types of Debt -->
+  <url><loc>https://freshstartdebtsupport.co.uk/credit-card-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/loan-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/catalogue-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/council-tax-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/utility-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/payday-loan-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/overdraft-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/store-card-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/mortgage-arrears.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/business-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/tax-debt.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/rent-arrears.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/gambling-debt.html</loc></url>
 
-  <!-- Claim Type Subpages -->
-  <url>
-    <loc>https://home-justice-solutions.co.uk/mould-and-damp.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/leaks-and-water-damage.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/broken-heating.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/unsafe-electrics.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/structural-issues.html</loc>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/pest-infestation.html</loc>
-    <priority>0.8</priority>
-  </url>
+  <!-- Creditors -->
+  <url><loc>https://freshstartdebtsupport.co.uk/barclays.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/hsbc.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/natwest.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/lloyds.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/capital-one.html</loc></url>
 
-  <!-- Council Pages (example) -->
-  <url>
-    <loc>https://home-justice-solutions.co.uk/councils/birmingham.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/councils/manchester.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://home-justice-solutions.co.uk/councils/liverpool.html</loc>
-    <priority>0.6</priority>
-  </url>
-  <!-- Add more councils as they are created -->
+  <!-- Debt Collectors -->
+  <url><loc>https://freshstartdebtsupport.co.uk/lowell.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/cabot.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/moriarty-law.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/pra-group.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/moorcroft.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/advantis.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/link-financial.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/capquest.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/wescot.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/resolvecall.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/hoist-finance.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/robinson-way.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/fredrickson.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/drydensfairfax.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/jacobs-enforcement.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/bristow-sutor.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/rossendales.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/equita.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/cdcbailiffs.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/marston-holdings.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/excel-civil-enforcement.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/newlyn.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/swift-credit.html</loc></url>
 
+  <!-- Popular Searches -->
+  <url><loc>https://freshstartdebtsupport.co.uk/debt-help-uk-2025.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/clear-debt-fast.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/iva-company.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/dmp-provider.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/stop-debt-collectors.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/affordable-repayment-plans.html</loc></url>
+
+  <!-- Enquiry Form Steps -->
+  <url><loc>https://freshstartdebtsupport.co.uk/enquire1.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/enquire2.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/enquire3.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/enquire4.html</loc></url>
+  <url><loc>https://freshstartdebtsupport.co.uk/enquire-thankyou.html</loc></url>
 </urlset>
