@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Council | Home Justice Solutions</title>
+  <meta name="description" content="Search your local council to get free help with housing disrepair claims across the UK.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f7ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #5b32c7;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .search-container {
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    ul#councilList {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    ul#councilList li {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      background: #fff;
+      transition: background 0.2s;
+    }
+
+    ul#councilList li:hover {
+      background: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 18px;
+      }
+
+      input[type="text"] {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Search Your Council</h1>
+</header>
+
+<div class="search-container">
+  <input type="text" id="councilSearch" placeholder="Start typing your council name..." onkeyup="filterCouncils()">
+  <ul id="councilList">
+    <li onclick="goToCouncil('aberdeen-city')">Aberdeen City Council</li>
+    <li onclick="goToCouncil('aberdeenshire')">Aberdeenshire Council</li>
+    <li onclick="goToCouncil('adur')">Adur District Council</li>
+    <li onclick="goToCouncil('angus')">Angus Council</li>
+    <li onclick="goToCouncil('argyll-and-bute')">Argyll and Bute Council</li>
+    <li onclick="goToCouncil('barking-and-dagenham')">Barking and Dagenham Council</li>
+    <li onclick="goToCouncil('barnet')">Barnet Council</li>
+    <li onclick="goToCouncil('barnsley')">Barnsley Council</li>
+    <li onclick="goToCouncil('basingstoke-and-deane')">Basingstoke and Deane Council</li>
+    <li onclick="goToCouncil('bath-and-north-east-somerset')">Bath and North East Somerset Council</li>
+    <li onclick="goToCouncil('bedford')">Bedford Borough Council</li>
+    <li onclick="goToCouncil('belfast')">Belfast City Council</li>
+    <li onclick="goToCouncil('birmingham')">Birmingham City Council</li>
+    <li onclick="goToCouncil('blackburn')">Blackburn with Darwen Council</li>
+    <li onclick="goToCouncil('blackpool')">Blackpool Council</li>
+    <li onclick="goToCouncil('bolton')">Bolton Council</li>
+    <li onclick="goToCouncil('bradford')">Bradford Council</li>
+    <li onclick="goToCouncil('brent')">Brent Council</li>
+    <li onclick="goToCouncil('brighton-and-hove')">Brighton & Hove City Council</li>
+    <li onclick="goToCouncil('bristol')">Bristol City Council</li>
+    <li onclick="goToCouncil('bromley')">Bromley Council</li>
+    <li onclick="goToCouncil('buckinghamshire')">Buckinghamshire Council</li>
+    <li onclick="goToCouncil('bury')">Bury Council</li>
+    <li onclick="goToCouncil('calderdale')">Calderdale Council</li>
+    <li onclick="goToCouncil('cambridge')">Cambridge City Council</li>
+    <li onclick="goToCouncil('camden')">Camden Council</li>
+    <li onclick="goToCouncil('cardiff')">Cardiff Council</li>
+    <li onclick="goToCouncil('central-bedfordshire')">Central Bedfordshire Council</li>
+    <li onclick="goToCouncil('cheshire-east')">Cheshire East Council</li>
+    <li onclick="goToCouncil('cheshire-west')">Cheshire West and Chester Council</li>
+    <li onclick="goToCouncil('city-of-edinburgh')">City of Edinburgh Council</li>
+    <li onclick="goToCouncil('city-of-london')">City of London Corporation</li>
+    <li onclick="goToCouncil('colchester')">Colchester City Council</li>
+    <li onclick="goToCouncil('coventry')">Coventry City Council</li>
+    <li onclick="goToCouncil('croydon')">Croydon Council</li>
+    <li onclick="goToCouncil('cumbria')">Cumbria County Council</li>
+    <li onclick="goToCouncil('derby')">Derby City Council</li>
+    <li onclick="goToCouncil('derbyshire')">Derbyshire County Council</li>
+    <li onclick="goToCouncil('doncaster')">Doncaster Council</li>
+    <li onclick="goToCouncil('dorset')">Dorset Council</li>
+    <li onclick="goToCouncil('durham')">Durham County Council</li>
+    <li onclick="goToCouncil('ealing')">Ealing Council</li>
+    <li onclick="goToCouncil('east-riding')">East Riding of Yorkshire Council</li>
+    <li onclick="goToCouncil('edinburgh')">Edinburgh Council</li>
+    <li onclick="goToCouncil('enfield')">Enfield Council</li>
+    <li onclick="goToCouncil('essex')">Essex County Council</li>
+    <li onclick="goToCouncil('exeter')">Exeter City Council</li>
+    <li onclick="goToCouncil('falkirk')">Falkirk Council</li>
+    <li onclick="goToCouncil('fife')">Fife Council</li>
+    <li onclick="goToCouncil('glasgow')">Glasgow City Council</li>
+    <li onclick="goToCouncil('greenwich')">Greenwich Council</li>
+    <li onclick="goToCouncil('hackney')">Hackney Council</li>
+    <li onclick="goToCouncil('halton')">Halton Borough Council</li>
+    <li onclick="goToCouncil('hammersmith')">Hammersmith and Fulham Council</li>
+    <li onclick="goToCouncil('hampshire')">Hampshire County Council</li>
+    <li onclick="goToCouncil('harrow')">Harrow Council</li>
+    <li onclick="goToCouncil('haringey')">Haringey Council</li>
+    <li onclick="goToCouncil('hastings')">Hastings Borough Council</li>
+    <li onclick="goToCouncil('havering')">Havering Council</li>
+    <li onclick="goToCouncil('herefordshire')">Herefordshire Council</li>
+    <li onclick="goToCouncil('hillingdon')">Hillingdon Council</li>
+    <li onclick="goToCouncil('hounslow')">Hounslow Council</li>
+    <li onclick="goToCouncil('hull')">Hull City Council</li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Council | Home Justice Solutions</title>
+  <meta name="description" content="Search your local council to get free help with housing disrepair claims across the UK.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f7ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #5b32c7;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .search-container {
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    ul#councilList {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    ul#councilList li {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      background: #fff;
+      transition: background 0.2s;
+    }
+
+    ul#councilList li:hover {
+      background: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 18px;
+      }
+
+      input[type="text"] {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Search Your Council</h1>
+</header>
+
+<div class="search-container">
+  <input type="text" id="councilSearch" placeholder="Start typing your council name..." onkeyup="filterCouncils()">
+  <ul id="councilList">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find Your Council | Home Justice Solutions</title>
+  <meta name="description" content="Search your local council to get free help with housing disrepair claims across the UK.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f7ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #5b32c7;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .search-container {
+      padding: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    ul#councilList {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+    }
+
+    ul#councilList li {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      background: #fff;
+      transition: background 0.2s;
+    }
+
+    ul#councilList li:hover {
+      background: #f0f0f0;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 18px;
+      }
+
+      input[type="text"] {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Search Your Council</h1>
+</header>
+
+<div class="search-container">
+  <input type="text" id="councilSearch" placeholder="Start typing your council name..." onkeyup="filterCouncils()">
+  <ul id="councilList">
+    <li onclick="goToCouncil('aberdeen-city')">Aberdeen City Council</li>
+    <li onclick="goToCouncil('aberdeenshire')">Aberdeenshire Council</li>
+    <li onclick="goToCouncil('adur')">Adur District Council</li>
+    <li onclick="goToCouncil('angus')">Angus Council</li>
+    <li onclick="goToCouncil('argyll-and-bute')">Argyll and Bute Council</li>
+    <li onclick="goToCouncil('barking-and-dagenham')">Barking and Dagenham Council</li>
+    <li onclick="goToCouncil('barnet')">Barnet Council</li>
+    <li onclick="goToCouncil('barnsley')">Barnsley Council</li>
+    <li onclick="goToCouncil('basingstoke-and-deane')">Basingstoke and Deane Council</li>
+    <li onclick="goToCouncil('bath-and-north-east-somerset')">Bath and North East Somerset Council</li>
+    <li onclick="goToCouncil('bedford')">Bedford Borough Council</li>
+    <li onclick="goToCouncil('belfast')">Belfast City Council</li>
+    <li onclick="goToCouncil('birmingham')">Birmingham City Council</li>
+    <li onclick="goToCouncil('blackburn')">Blackburn with Darwen Council</li>
+    <li onclick="goToCouncil('blackpool')">Blackpool Council</li>
+    <li onclick="goToCouncil('bolton')">Bolton Council</li>
+    <li onclick="goToCouncil('bradford')">Bradford Council</li>
+    <li onclick="goToCouncil('brent')">Brent Council</li>
+    <li onclick="goToCouncil('brighton-and-hove')">Brighton & Hove City Council</li>
+    <li onclick="goToCouncil('bristol')">Bristol City Council</li>
+    <li onclick="goToCouncil('bromley')">Bromley Council</li>
+    <li onclick="goToCouncil('buckinghamshire')">Buckinghamshire Council</li>
+    <li onclick="goToCouncil('bury')">Bury Council</li>
+    <li onclick="goToCouncil('calderdale')">Calderdale Council</li>
+    <li onclick="goToCouncil('cambridge')">Cambridge City Council</li>
+    <li onclick="goToCouncil('camden')">Camden Council</li>
+    <li onclick="goToCouncil('cardiff')">Cardiff Council</li>
+    <li onclick="goToCouncil('central-bedfordshire')">Central Bedfordshire Council</li>
+    <li onclick="goToCouncil('cheshire-east')">Cheshire East Council</li>
+    <li onclick="goToCouncil('cheshire-west')">Cheshire West and Chester Council</li>
+    <li onclick="goToCouncil('city-of-edinburgh')">City of Edinburgh Council</li>
+    <li onclick="goToCouncil('city-of-london')">City of London Corporation</li>
+    <li onclick="goToCouncil('colchester')">Colchester City Council</li>
+    <li onclick="goToCouncil('coventry')">Coventry City Council</li>
+    <li onclick="goToCouncil('croydon')">Croydon Council</li>
+    <li onclick="goToCouncil('cumbria')">Cumbria County Council</li>
+    <li onclick="goToCouncil('derby')">Derby City Council</li>
+    <li onclick="goToCouncil('derbyshire')">Derbyshire County Council</li>
+    <li onclick="goToCouncil('doncaster')">Doncaster Council</li>
+    <li onclick="goToCouncil('dorset')">Dorset Council</li>
+    <li onclick="goToCouncil('durham')">Durham County Council</li>
+    <li onclick="goToCouncil('ealing')">Ealing Council</li>
+    <li onclick="goToCouncil('east-riding')">East Riding of Yorkshire Council</li>
+    <li onclick="goToCouncil('edinburgh')">Edinburgh Council</li>
+    <li onclick="goToCouncil('enfield')">Enfield Council</li>
+    <li onclick="goToCouncil('essex')">Essex County Council</li>
+    <li onclick="goToCouncil('exeter')">Exeter City Council</li>
+    <li onclick="goToCouncil('falkirk')">Falkirk Council</li>
+    <li onclick="goToCouncil('fife')">Fife Council</li>
+    <li onclick="goToCouncil('glasgow')">Glasgow City Council</li>
+    <li onclick="goToCouncil('greenwich')">Greenwich Council</li>
+    <li onclick="goToCouncil('hackney')">Hackney Council</li>
+    <li onclick="goToCouncil('halton')">Halton Borough Council</li>
+    <li onclick="goToCouncil('hammersmith')">Hammersmith and Fulham Council</li>
+    <li onclick="goToCouncil('hampshire')">Hampshire County Council</li>
+    <li onclick="goToCouncil('harrow')">Harrow Council</li>
+    <li onclick="goToCouncil('haringey')">Haringey Council</li>
+    <li onclick="goToCouncil('hastings')">Hastings Borough Council</li>
+    <li onclick="goToCouncil('havering')">Havering Council</li>
+    <li onclick="goToCouncil('herefordshire')">Herefordshire Council</li>
+    <li onclick="goToCouncil('hillingdon')">Hillingdon Council</li>
+    <li onclick="goToCouncil('hounslow')">Hounslow Council</li>
+    <li onclick="goToCouncil('hull')">Hull City Council</li>
+  </ul>
+</div>
+
+<script>
+  function goToCouncil(slug) {
+    window.location.href = "councils/" + slug + ".html";
+  }
+
+  function filterCouncils() {
+    const input = document.getElementById("councilSearch").value.toLowerCase();
+    const items = document.querySelectorAll("#councilList li");
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(input) ? "" : "none";
+    });
+  }
+</script>
+
+</body>
+</html>
+  <footer>
+    © 2025 Home Justice Solutions. All rights reserved.<br />
+    We are not a firm of solicitors. We connect tenants with housing disrepair specialists. This website does not provide legal advice.
+  </footer>
+
+</body>
+</html>
