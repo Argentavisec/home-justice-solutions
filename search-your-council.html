@@ -75,11 +75,13 @@
     }
     input[type="text"] {
       width: 100%;
-      padding: 15px;
+      max-width: 500px;
+      display: block;
+      margin: 10px auto;
+      padding: 14px 16px;
       font-size: 16px;
       border: 1px solid #ccc;
       border-radius: 8px;
-      margin-top: 10px;
     }
     ul#councilList {
       list-style: none;
@@ -117,6 +119,10 @@
         padding: 12px;
         font-size: 15px;
       }
+      input[type="text"] {
+        width: 95%;
+        font-size: 15px;
+      }
       header h1 {
         font-size: 20px;
       }
@@ -134,6 +140,13 @@
         menu.style.display = "none";
       }
     });
+    function filterCouncils() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const items = document.querySelectorAll("#councilList li");
+      items.forEach(li => {
+        li.style.display = li.textContent.toLowerCase().includes(input) ? "block" : "none";
+      });
+    }
   </script>
 </head>
 <body>
@@ -155,7 +168,7 @@
     <a href="search-your-council.html">Find Your Council</a>
     <a href="https://form.jotform.com/250594347028056">Start a Claim</a>
   </div>
-  
+
   <div class="container">
     <div class="section">
       <h1>Search Your Local Council</h1>
