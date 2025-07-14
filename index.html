@@ -2,128 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Free legal support for housing disrepair claims. Get compensation and repairs fast with Home Justice Solutions."/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Start your free housing disrepair claim with Home Justice Solutions. Get help with mould, leaks, unsafe electrics and more – no win, no fee." />
   <title>Housing Disrepair Claims UK | Home Justice Solutions</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      background: #f9f9ff;
+      color: #222;
     }
-    .banner {
-      background-color: #7d5fff;
+    header {
+      background-color: #7c3aed;
       text-align: center;
-      padding: 30px 15px 20px;
+      padding: 20px 10px;
+    }
+    header img {
+      max-height: 80px;
+    }
+    .menu-toggle {
+      background: #5b21b6;
       color: white;
-    }
-    .banner img {
-      width: 80px;
-      margin-bottom: 10px;
-    }
-    .banner h1 {
-      font-size: 1.6rem;
-      margin: 0;
-    }
-    .cta-buttons {
-      text-align: center;
-      margin-top: 15px;
-    }
-    .menu-btn, .menu-cta {
-      display: inline-block;
-      margin: 5px;
-      padding: 12px 20px;
       border: none;
-      font-size: 1rem;
-      font-weight: bold;
-      text-align: center;
+      padding: 12px 20px;
+      font-size: 16px;
       border-radius: 8px;
       cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    }
-    .menu-btn {
-      background-color: #6c47e0;
-      color: white;
+      margin: 10px 5px;
     }
     .menu-cta {
-      background-color: #22d3ee;
+      display: inline-block;
+      background-color: #06b6d4;
       color: black;
-    }
-    .container {
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    .section {
-      background: #f3efff;
-      padding: 25px 20px;
-      border-radius: 12px;
-      margin-bottom: 25px;
-    }
-    .section h2 {
-      color: #333;
-      margin-top: 0;
-    }
-    .section ul, .section ol {
-      padding-left: 20px;
-    }
-    footer {
+      padding: 12px 24px;
+      font-weight: bold;
+      font-size: 16px;
+      border-radius: 8px;
       text-align: center;
-      font-size: 0.9rem;
-      padding: 20px;
-      background-color: #eee;
-      color: #333;
+      text-decoration: none;
+      margin: 10px 5px;
     }
     .menu-content {
-      background-color: #fafafa;
-      padding: 20px;
       display: none;
+      background: #ede4ff;
+      text-align: center;
+      padding: 20px;
     }
     .menu-content a {
       display: block;
-      margin: 10px 0;
-      color: #444;
+      padding: 10px;
       text-decoration: none;
+      color: #222;
+      font-weight: bold;
     }
-    .menu-section h4 {
-      margin-top: 0;
+    .menu-content a:hover {
+      text-decoration: underline;
     }
-    @media (min-width: 600px) {
-      .banner img {
-        width: 100px;
-      }
-      .menu-btn, .menu-cta {
-        font-size: 1.1rem;
+    .container {
+      padding: 20px;
+    }
+    .section {
+      background-color: #ede4ff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .section h1, .section h2 {
+      color: #4c1d95;
+    }
+    .section a.menu-cta {
+      display: inline-block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      padding: 20px;
+    }
+    @media (max-width: 600px) {
+      .menu-toggle,
+      .menu-cta {
+        width: 90%;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="banner">
-    <img src="logo-home-justice.png.jpg" alt="Home Justice Solutions Logo">
-    <h1>Home Justice Solutions</h1>
-    <div class="cta-buttons">
-      <a href="#" class="menu-btn" onclick="toggleMenu()">☰ Menu</a>
-      <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
-    </div>
-  </div>
+<header>
+  <img src="logo.png" alt="Home Justice Solutions Logo" />
+  <h1>Home Justice Solutions</h1>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
+</header>
 
-  <div class="menu-content" id="menuContent">
-    <div class="menu-section">
-      <h4>Navigation</h4>
-      <a href="index.html">Home</a>
-      <a href="about-us.html">About Us</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="claim-types.html">Claim Types</a>
-      <a href="tenant-rights.html">Your Rights</a>
-      <a href="faq.html">FAQs</a>
-      <a href="search-your-council.html">Find Your Council</a>
-      <a href="https://form.jotform.com/250594347028056">Start a Claim</a>
-    </div>
-  </div>
+<div class="menu-content" id="menuContent">
+  <a href="index.html">Home</a>
+  <a href="about-us.html">About Us</a>
+  <a href="how-it-works.html">How It Works</a>
+  <a href="claim-types.html">Claim Types</a>
+  <a href="tenant-rights.html">Your Rights</a>
+  <a href="faq.html">FAQs</a>
+  <a href="search-your-council.html">Find Your Council</a>
+  <a href="https://form.jotform.com/250594347028056">Start a Claim</a>
+</div>
 
   <script>
     function toggleMenu() {
