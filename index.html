@@ -17,15 +17,17 @@
       min-height: 100vh;
     }
 
-   .banner {
-      background: #ffffff;
-      padding: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 100vw;
-      box-sizing: border-box;
+.banner {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  text-align: center;
 }
 
 
@@ -36,16 +38,16 @@
       gap: 12px;
     }
 
-    .logo {
-      height: 60px;
-      max-width: 100%;
-    }
-
-    .site-name {
-      color: #5b32c7;
-      font-size: 24px;
-      font-weight: bold;
-    }
+.logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.site-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #5b32c7;
+}
 
     .btn-menu {
       margin-top: 10px;
@@ -180,10 +182,11 @@
 </head>
 <body>
   <div class="banner">
-    <div class="top-bar">
-      <img src="logo-home-justice.png.jpg" alt="Home Justice Solutions Logo" class="logo" />
-      <div class="site-name">Home Justice Solutions</div>
-    </div>
+<div class="banner">
+  <img src="logo-home-justice.png.jpg" alt="Home Justice Solutions Logo" class="logo" />
+  <div class="site-name">Home Justice Solutions</div>
+</div>
+
     <div style="margin-top: 12px;">
       <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
     </div>
