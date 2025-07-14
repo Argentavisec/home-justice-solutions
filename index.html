@@ -16,6 +16,28 @@
       flex-direction: column;
       min-height: 100vh;
     }
+    @media screen and (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+
+  .top-bar div {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .site-name {
+    font-size: 18px;
+  }
+
+  .menu-cta, .btn-menu {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
 
     .banner {
       background: #ffffff;
