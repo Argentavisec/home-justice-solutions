@@ -16,28 +16,6 @@
       flex-direction: column;
       min-height: 100vh;
     }
-    @media screen and (max-width: 600px) {
-  .top-bar {
-    flex-direction: column;
-    align-items: flex-start !important;
-    gap: 12px;
-  }
-
-  .top-bar div {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .site-name {
-    font-size: 18px;
-  }
-
-  .menu-cta, .btn-menu {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-}
-
 
     .banner {
       background: #ffffff;
@@ -56,7 +34,8 @@
     }
 
     .logo {
-      height: 50px;
+      height: 60px;
+      max-width: 100%;
     }
 
     .site-name {
@@ -170,6 +149,16 @@
     ul {
       padding-left: 20px;
     }
+
+    @media screen and (max-width: 600px) {
+      .site-name {
+        font-size: 20px;
+        text-align: center;
+      }
+      .top-bar {
+        flex-direction: column;
+      }
+    }
   </style>
   <script>
     function toggleMenu() {
@@ -189,17 +178,15 @@
 <body>
   <div class="banner">
     <div class="top-bar">
-      <img src="logo-home-justice.png.jpg" alt="Home Justice Solutions Logo" class="logo" style="max-width: 150px; height: auto;" />
+      <img src="logo-home-justice.png.jpg" alt="Home Justice Solutions Logo" class="logo" />
       <div class="site-name">Home Justice Solutions</div>
     </div>
+    <div style="margin-top: 12px;">
+      <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    </div>
+    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
   </div>
-
-  <div style="text-align: center;">
-    <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
-  </div>
-
-  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
-
+  
   <div class="menu-content" id="menuContent">
     <div class="menu-section">
       <h4>Navigation</h4>
