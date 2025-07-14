@@ -10,44 +10,39 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #7a5cf2, #9f5de5);
+      background: #f6f5ff;
       color: #333;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
-.banner {
-  background: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 12px;
-  text-align: center;
-}
-
+    .banner {
+      background: #7a5cf2;
+      padding: 15px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
     .top-bar {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
     }
 
-.logo {
-  max-width: 120px;
-  height: auto;
-  margin-bottom: 10px;
-}
-.site-name {
-  font-size: 22px;
-  font-weight: bold;
-  color: #5b32c7;
-}
+    .logo {
+      height: 60px;
+      margin-bottom: 8px;
+    }
+
+    .site-name {
+      color: #fff;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+    }
 
     .btn-menu {
       margin-top: 10px;
@@ -59,110 +54,69 @@
       border-radius: 6px;
       cursor: pointer;
       font-weight: bold;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
     .btn-menu:hover {
-      background: #4b28ac;
+      background: #4a27ac;
     }
 
     .menu-content {
       display: none;
       flex-direction: column;
-      background: #ffffff;
+      background: #7a5cf2;
       padding: 12px;
       margin: 0 auto;
       margin-top: 8px;
       width: fit-content;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     .menu-section {
       padding: 10px 0;
-      border-top: 1px solid #ccc;
+      border-top: 1px solid #ffffff33;
     }
 
     .menu-section h4 {
       font-size: 15px;
       margin: 0 0 6px 12px;
-      color: #5b32c7;
+      color: #fff;
       font-weight: bold;
       text-transform: uppercase;
     }
 
     .menu-content a {
       display: block;
-      color: #333;
+      color: white;
       text-decoration: none;
       padding: 6px 12px;
       font-size: 15px;
     }
 
     .menu-content a:hover {
-      background: #f0f0f0;
+      background: #6a4dd6;
       text-decoration: underline;
     }
 
     .menu-cta {
       background: #2ed3d3;
-      color: #000;
+      color: #000 !important;
       font-weight: bold;
-      padding: 10px 20px;
+      padding: 10px 16px;
       margin: 14px auto;
-      border-radius: 6px;
+      border-radius: 5px;
       width: 240px;
       font-size: 16px;
       text-align: center;
       display: block;
       text-decoration: none;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.25);
-      transition: background 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+      transition: background 0.3s;
     }
 
     .menu-cta:hover {
       background: #1fcaca;
-    }
-
-    .container {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .section {
-      background: #fff;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 25px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #ffffff;
-      color: #5b32c7;
-      text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
-    }
-
-    h1, h2 {
-      color: #5b32c7;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    @media screen and (max-width: 600px) {
-      .site-name {
-        font-size: 20px;
-        text-align: center;
-      }
-      .top-bar {
-        flex-direction: column;
-      }
     }
   </style>
   <script>
@@ -171,7 +125,7 @@
       menu.style.display = menu.style.display === "flex" ? "none" : "flex";
     }
 
-    window.addEventListener("click", function(e) {
+    window.addEventListener("click", function (e) {
       const menu = document.getElementById("menuContent");
       const btn = document.getElementById("menuButton");
       if (!menu.contains(e.target) && e.target !== btn) {
@@ -181,17 +135,19 @@
   </script>
 </head>
 <body>
-  <div class="banner">
-<div class="banner">
-  <img src="logo-home-justice.png.jpg" alt="Home Justice Solutions Logo" class="logo" />
-  <div class="site-name">Home Justice Solutions</div>
-</div>
 
-    <div style="margin-top: 12px;">
-      <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+  <div class="banner">
+    <div class="top-bar">
+      <img src="logo-home-justice.png.jpg" alt="Home Justice Solutions Logo" class="logo" />
+      <div class="site-name">Home Justice Solutions</div>
     </div>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
   </div>
+
+  <div style="text-align: center;">
+    <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+  </div>
+
+  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
 
   <div class="menu-content" id="menuContent">
     <div class="menu-section">
@@ -202,10 +158,11 @@
       <a href="claim-types.html">Claim Types</a>
       <a href="tenant-rights.html">Your Rights</a>
       <a href="faq.html">FAQs</a>
-      <a href="search-your-council.html">find your council</a>
+      <a href="search-your-council.html">Find Your Council</a>
       <a href="https://form.jotform.com/250594347028056">Start a Claim</a>
     </div>
   </div>
+
 
 <div class="container">
   <div class="section">
