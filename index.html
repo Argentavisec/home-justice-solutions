@@ -1,48 +1,32 @@
-<!-- Header with logo, menu toggle, and CTA -->
-<header class="banner" role="banner">
-  <div class="top-bar" style="display: flex; justify-content: center; align-items: center; gap: 15px; padding: 10px;">
-    <img src="logo.png" alt="Home Justice Solutions Logo" class="logo" />
-    <h1 style="color: #fff; margin: 0; font-weight: bold; font-size: 1.8rem;">Home Justice Solutions</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How Housing Disrepair Claims Work | Home Justice Solutions</title>
+  <meta name="description" content="Learn how housing disrepair claims work, what steps to take, and how much compensation you can get for damp, mould, and other disrepair issues in your home." />
+  <meta name="keywords" content="how does housing disrepair work, housing disrepair claims process, housing disrepair compensation, damp compensation, mould claims, landlord repair obligations" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Banner Header -->
+  <div class="banner">
+    <div class="top-bar">
+      <img src="logo.png" alt="Home Justice Solutions Logo" class="logo" />
+      <h1>How Housing Disrepair Claims Work</h1>
+    </div>
   </div>
-</header>
 
-<!-- Menu Placeholder -->
-<div id="menu-placeholder"></div>
-
-<script>
-  // Load menu.html content into menu-placeholder div
-  fetch('menu.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('menu-placeholder').innerHTML = html;
-
-      // After loading menu.html, add toggle menu functionality
-      const menuButton = document.getElementById('menuButton');
-      const menuContent = document.getElementById('menuContent'); // Assuming your menu.html has this id
-
-      menuButton.addEventListener('click', () => {
-        if (menuContent.style.display === 'flex') {
-          menuContent.style.display = 'none';
-        } else {
-          menuContent.style.display = 'flex';
-          menuContent.style.flexDirection = 'column';
-          menuContent.style.alignItems = 'center';
-        }
-      });
-
-      // Optional: close menu when clicking outside
-      window.addEventListener('click', (e) => {
-        if (!menuContent.contains(e.target) && e.target !== menuButton) {
-          menuContent.style.display = 'none';
-        }
-      });
-    })
-    .catch(err => {
-      console.error('Failed to load menu.html:', err);
-    });
-</script>
-
-
+  <!-- Menu Placeholder -->
+  <div id="menu-placeholder"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu-placeholder").innerHTML = data);
+  </script>
+  
   <main class="container">
 
     <!-- Section 1: Introduction -->
