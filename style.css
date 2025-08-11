@@ -176,10 +176,21 @@ footer {
   .menu-content {
     width: 90vw;
     max-width: 90vw;
-  }
-  .menu-section h4 {
-    padding-left: 0;
-  }
+
+.menu-section h4 {
+  color: #1a0d4d; /* Very dark purple */
+  font-weight: bold;
+}
+
+.menu-section h4 {
+  color: #1a0d4d;
+  font-weight: bold;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+
   .menu-content a {
     padding-left: 20px;
   }
