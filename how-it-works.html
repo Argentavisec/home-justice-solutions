@@ -2,122 +2,507 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How It Works | Home Justice Solutions</title>
-  <meta name="description" content="Learn how our housing disrepair claims process works. Step-by-step guide for council and housing association tenants to claim free repairs and compensation.">
-  <meta name="keywords" content="housing disrepair claim process, how it works housing claim, no win no fee housing claims, Home Justice Solutions">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9ff;
-      color: #222;
-    }
-    header {
-      background-color: #7c3aed;
-      text-align: center;
-      padding: 20px 10px;
-    }
-    header img {
-      max-height: 80px;
-    }
-    header h1 {
-      color: #fff;
-      margin: 10px 0 0;
-      font-size: 24px;
-    }
-    .menu-toggle {
-      background: #5b21b6;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 10px 5px;
-    }
-    .menu-cta {
-      display: inline-block;
-      background-color: #06b6d4;
-      color: black;
-      padding: 10px 18px;
-      font-weight: bold;
-      font-size: 16px;
-      border-radius: 8px;
-      text-align: center;
-      text-decoration: none;
-      margin: 10px 5px;
-      max-width: 250px;
-      word-wrap: break-word;
-    }
-    .menu-content {
-      display: none;
-      background: #ede4ff;
-      text-align: center;
-      padding: 20px;
-    }
-    .menu-content a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: #222;
-      font-weight: bold;
-    }
-    .menu-content a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      padding: 20px;
-    }
-    .section {
-      background-color: #ede4ff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .section h1, .section h2 {
-      color: #4c1d95;
-    }
-    .step {
-      margin-bottom: 20px;
-    }
-    .step h3 {
-      margin: 10px 0;
-      color: #5b21b6;
-    }
-    .section a.menu-cta {
-      display: inline-block;
-      text-align: center;
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #555;
-      padding: 20px;
-    }
-    @media (max-width: 600px) {
-      .menu-toggle,
-      .menu-cta {
-        width: 90%;
-        max-width: 90%;
-        padding: 12px;
-        font-size: 15px;
-      }
-      header h1 {
-        font-size: 20px;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How Housing Disrepair Claims Work | Home Justice Solutions</title>
+  <meta name="description" content="Learn how housing disrepair claims work, what steps to take, and how much compensation you can get for damp, mould, and other disrepair issues in your home." />
+  <meta name="keywords" content="how does housing disrepair work, housing disrepair claims process, housing disrepair compensation, damp compensation, mould claims, landlord repair obligations" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Banner Header -->
+  <div class="banner">
+    <div class="top-bar">
+      <img src="logo.png" alt="Home Justice Solutions Logo" class="logo" />
+      <h1>How Housing Disrepair Claims Work</h1>
+    </div>
+  </div>
+
+  <!-- Menu Placeholder -->
+  <div id="menu-placeholder"></div>
   <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu-placeholder").innerHTML = data);
+  </script>
+
+  <main class="container">
+
+    <!-- Section 1: What is Housing Disrepair? -->
+    <div class="section" aria-labelledby="what-is-disrepair">
+      <h2 id="what-is-disrepair">What is Housing Disrepair?</h2>
+      <p>Housing disrepair refers to problems in rented properties that affect their condition, safety, or habitability. Common issues include damp, mould, leaking roofs, faulty heating, broken windows, and electrical hazards. These conditions can impact your health and wellbeing and often violate landlord obligations under UK law.</p>
+      <p>Understanding what counts as housing disrepair is the first step to knowing how claims work and what compensation you may be entitled to.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Check If You Qualify for Housing Disrepair Claim">Check If You Qualify</a>
+    </div>
+
+    <!-- Section 2: Your Legal Rights as a Tenant -->
+    <div class="section" aria-labelledby="legal-rights">
+      <h2 id="legal-rights">Your Legal Rights as a Tenant Facing Housing Disrepair</h2>
+      <p>Tenants in England, Scotland, and Wales have legal protections ensuring landlords maintain their properties in good repair. Key legislation includes the Landlord and Tenant Act 1985 and the Homes (Fitness for Human Habitation) Act 2018. These laws require landlords to repair and keep safe the property’s structure, installations, and ensure it is fit to live in.</p>
+      <p>If your landlord fails these duties, you have the right to take action to enforce repairs and seek compensation for damages caused by disrepair.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start Your Housing Disrepair Claim Today">Start Your Housing Disrepair Claim Today</a>
+    </div>
+
+    <!-- Section 3: How Does a Housing Disrepair Claim Work? -->
+    <div class="section" aria-labelledby="claim-process">
+      <h2 id="claim-process">How Does a Housing Disrepair Claim Work?</h2>
+      <p>Making a housing disrepair claim involves several steps. First, you must document the disrepair, notify your landlord in writing, and give them a reasonable chance to fix the problems. If they fail, you can escalate the issue by contacting your local council or seeking legal advice.</p>
+      <p>Claims often require gathering evidence such as photos, medical reports, and expert surveys to prove the landlord's neglect and the impact of disrepair on your health and property.</p>
+      <p>If the landlord does not resolve the issue voluntarily, your solicitor may send a formal letter of claim and prepare to take the case to court if necessary.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Legal Advice on Your Disrepair Claim">Get Legal Advice on Your Disrepair Claim</a>
+    </div>
+
+    <!-- Section 4: What Evidence Do You Need for a Housing Disrepair Claim? -->
+    <div class="section" aria-labelledby="evidence-needed">
+      <h2 id="evidence-needed">What Evidence Do You Need for a Housing Disrepair Claim?</h2>
+      <p>Strong evidence is critical to success in housing disrepair claims. You should collect:</p>
+      <ul>
+        <li>Photographs and videos showing the disrepair and hazards.</li>
+        <li>Written communication with your landlord requesting repairs.</li>
+        <li>Medical reports linking health issues to disrepair (e.g., asthma triggered by mould).</li>
+        <li>Expert reports or surveys confirming the disrepair’s severity and landlord responsibility.</li>
+        <li>Receipts or proof of costs incurred for alternative accommodation or repairs.</li>
+      </ul>
+      <p>Good evidence builds a compelling case and improves your chances of receiving fair compensation.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Check Your Eligibility for Disrepair Claim">Check Your Eligibility</a>
+    </div>
+
+    <!-- Section 5: How Much Compensation Can You Get for Housing Disrepair? -->
+    <div class="section" aria-labelledby="compensation-amounts">
+      <h2 id="compensation-amounts">How Much Compensation Can You Get for Housing Disrepair?</h2>
+      <p>Compensation for housing disrepair claims varies widely based on factors like the severity of the disrepair, duration, impact on health, and landlord conduct. Typical awards cover:</p>
+      <ul>
+        <li><strong>Inconvenience and Distress:</strong> Compensation for discomfort and disruption caused by living in poor conditions.</li>
+        <li><strong>Health-Related Damages:</strong> Claims for medical costs and pain caused by conditions like mould-triggered asthma.</li>
+        <li><strong>Damage to Personal Property:</strong> Payment for belongings damaged by leaks, damp, or pests.</li>
+        <li><strong>Temporary Accommodation:</strong> Costs if you had to move out during repairs.</li>
+        <li><strong>Loss of Amenity:</strong> Compensation for reduced use and enjoyment of your home.</li>
+      </ul>
+      <p>Typical compensation ranges from a few hundred pounds for minor issues up to £10,000 or more for severe cases causing serious harm or prolonged distress.</p>
+      <p>Courts consider expert evidence, medical reports, and tenant testimony to determine fair awards.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start Your Compensation Claim">Start Your Compensation Claim</a>
+    </div>
+
+    <!-- Section 6: Role of Local Councils in Housing Disrepair -->
+    <div class="section" aria-labelledby="local-council-role">
+      <h2 id="local-council-role">Role of Local Councils in Housing Disrepair Claims</h2>
+      <p>Local councils have a vital role in enforcing housing standards and protecting tenants. If your landlord fails to repair disrepair after notice, you can report the issues to your council’s housing enforcement team.</p>
+      <p>The council can inspect your property and issue improvement or hazard awareness notices to your landlord. In serious cases, councils can prosecute landlords who neglect their responsibilities.</p>
+      <p>Council involvement can help prompt repairs and support your legal claim by providing official inspection reports.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Help Reporting Disrepair to Council">Get Help Reporting Disrepair to Council</a>
+    </div>
+
+    <!-- Section 7: Typical Timeline for a Housing Disrepair Claim -->
+    <div class="section" aria-labelledby="claim-timeline">
+      <h2 id="claim-timeline">Typical Timeline for a Housing Disrepair Claim</h2>
+      <p>Housing disrepair claims can take several months to over a year depending on complexity and cooperation from your landlord:</p>
+      <ul>
+        <li><strong>Initial Notification:</strong> Inform landlord of disrepair in writing.</li>
+        <li><strong>Repair Period:</strong> Allow reasonable time for repairs to be made.</li>
+        <li><strong>Evidence Gathering:</strong> Collect photos, reports, medical evidence.</li>
+        <li><strong>Legal Action:</strong> Solicitors send formal claim letters, negotiate or prepare court proceedings.</li>
+        <li><strong>Settlement or Court:</strong> Many claims settle out of court; contested cases may go to trial.</li>
+        <li><strong>Compensation Payment:</strong> Once agreed or ordered, compensation is paid to the tenant.</li>
+      </ul>
+      <p>Early legal advice can help speed up this process and increase your chances of a favourable outcome.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Legal Advice Now">Get Legal Advice Now</a>
+    </div>
+
+    <!-- Section 8: Common Challenges in Housing Disrepair Claims -->
+    <div class="section" aria-labelledby="common-challenges">
+      <h2 id="common-challenges">Common Challenges in Housing Disrepair Claims and How to Overcome Them</h2>
+      <p>While housing disrepair claims can be successful, tenants often face obstacles such as:</p>
+      <ul>
+        <li><strong>Landlord Denial:</strong> Landlords may deny responsibility or delay repairs.</li>
+        <li><strong>Insufficient Evidence:</strong> Lack of clear documentation can weaken your claim.</li>
+        <li><strong>Retaliation:</strong> Some landlords may retaliate with eviction threats or harassment.</li>
+        <li><strong>Lengthy Processes:</strong> Claims can take time, causing stress for tenants.</li>
+      </ul>
+      <p>To overcome these, always communicate in writing, gather detailed evidence, report issues promptly to your council, and seek specialist legal advice early.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Support Overcoming Claim Challenges">Get Support Overcoming Claim Challenges</a>
+    </div>
+
+    <!-- Section 9: Alternative Dispute Resolution in Housing Disrepair Claims -->
+    <div class="section" aria-labelledby="adr-explained">
+      <h2 id="adr-explained">Alternative Dispute Resolution (ADR) in Housing Disrepair Claims</h2>
+      <p>Before escalating to court, many housing disrepair disputes can be resolved through Alternative Dispute Resolution (ADR) methods such as mediation or arbitration. ADR offers a less costly, faster, and less adversarial route to resolving disagreements.</p>
+      <p>Mediation involves an independent third party helping both tenant and landlord reach a mutually acceptable agreement. Arbitration is more formal, with an arbitrator making a binding decision based on evidence presented.</p>
+      <p>Using ADR can reduce legal costs, avoid court delays, and preserve a better landlord-tenant relationship.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Help with Alternative Dispute Resolution">Get Help with ADR</a>
+    </div>
+
+    <!-- Section 10: The Legal Process for Housing Disrepair Claims -->
+    <div class="section" aria-labelledby="legal-process">
+      <h2 id="legal-process">The Legal Process for Housing Disrepair Claims</h2>
+      <p>If informal negotiations and ADR fail, a formal legal claim can be made through the courts. The legal process typically involves:</p>
+      <ul>
+        <li><strong>Pre-Action Protocol:</strong> Sending a formal letter of claim to the landlord outlining issues and damages.</li>
+        <li><strong>Filing a Claim:</strong> Submitting court paperwork if the landlord does not respond or disputes the claim.</li>
+        <li><strong>Evidence Disclosure:</strong> Both parties exchange evidence including inspection reports, photos, and medical documents.</li>
+        <li><strong>Court Hearing:</strong> Judge reviews the evidence and hears arguments to determine liability and compensation.</li>
+        <li><strong>Judgment and Award:</strong> Court orders compensation and any necessary repairs.</li>
+      </ul>
+      <p>The legal process can be complex and lengthy, so it’s vital to get expert legal representation from the outset.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start Your Legal Claim">Start Your Legal Claim</a>
+    </div>
+
+    <!-- Section 11: Tenant Tips for Managing Housing Disrepair Issues -->
+    <div class="section" aria-labelledby="tenant-tips">
+      <h2 id="tenant-tips">Tenant Tips for Managing Housing Disrepair Issues</h2>
+      <p>To protect yourself and strengthen any future claim, tenants should take the following steps when facing housing disrepair:</p>
+      <ul>
+        <li><strong>Document Everything:</strong> Keep dated photos, videos, and written records of disrepair and communications.</li>
+        <li><strong>Communicate in Writing:</strong> Always notify your landlord or agent of issues in writing to create a paper trail.</li>
+        <li><strong>Report to Council:</strong> Inform your local housing authority if urgent repairs are ignored.</li>
+        <li><strong>Seek Medical Advice:</strong> If disrepair affects your health, get professional reports to support your claim.</li>
+        <li><strong>Get Legal Advice Early:</strong> Consult specialist solicitors to understand your rights and options.</li>
+      </ul>
+      <p>Being proactive and organised improves your chances of a successful outcome.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Tenant Support and Advice">Get Tenant Support</a>
+    </div>
+
+    <!-- Section 12: Frequently Asked Questions (FAQs) About Housing Disrepair -->
+    <div class="section" aria-labelledby="faqs">
+      <h2 id="faqs">Frequently Asked Questions About Housing Disrepair</h2>
+      <h3>What constitutes housing disrepair?</h3>
+      <p>Housing disrepair includes issues such as damp and mould, leaking roofs or pipes, faulty heating, broken windows or doors, unsafe electrics, and structural damage affecting safety or habitability.</p>
+
+      <h3>How do I make a housing disrepair claim?</h3>
+      <p>Start by notifying your landlord in writing and allowing them reasonable time to repair. If unresolved, gather evidence and seek legal advice to begin a claim.</p>
+
+      <h3>Can I claim compensation if I have already moved out?</h3>
+      <p>Yes, you may be able to claim for past disrepair if the landlord was responsible during your tenancy.</p>
+
+      <h3>Will making a claim affect my future renting?</h3>
+      <p>Claims should not legally affect your renting rights or credit score if handled properly, but confidential handling is important.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Ask Your Questions About Disrepair">Ask Your Questions</a>
+    </div>
+
+    <!-- Section 13: Summary and Final Advice -->
+    <div class="section" aria-labelledby="final-advice">
+      <h2 id="final-advice">Summary and Final Advice on Housing Disrepair Claims</h2>
+      <p>Understanding how housing disrepair claims work empowers tenants to take control of their living conditions and seek justice when landlords neglect responsibilities. Remember to:</p>
+      <ul>
+        <li>Notify landlords promptly in writing</li>
+        <li>Document all issues and communications thoroughly</li>
+        <li>Use council enforcement powers when necessary</li>
+        <li>Consider alternative dispute resolution before legal action</li>
+        <li>Seek specialist legal advice early to maximise compensation</li>
+      </ul>
+      <p>Taking action early can lead to quicker repairs, better health, and fair financial redress.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start Your Housing Disrepair Claim Today">Start Your Housing Disrepair Claim Today</a>
+    </div>
+    <!-- Section 14: Understanding Housing Disrepair Compensation Amounts -->
+    <div class="section" aria-labelledby="compensation-amounts">
+      <h2 id="compensation-amounts">How Much Compensation Can You Expect for Housing Disrepair?</h2>
+      <p>Compensation for housing disrepair depends on multiple factors including the severity of the disrepair, duration, impact on your health, and whether your landlord acted negligently. Typical compensation covers:</p>
+      <ul>
+        <li><strong>Inconvenience and Distress:</strong> Payment for the disruption and discomfort of living with issues such as damp, mould, or no heating.</li>
+        <li><strong>Health Impacts:</strong> If your health worsened due to disrepair, compensation may include medical costs and pain and suffering.</li>
+        <li><strong>Damage to Property:</strong> Reimbursement for belongings damaged by leaks, mould, or pests.</li>
+        <li><strong>Temporary Accommodation:</strong> If you had to move out for repairs, costs of alternative housing can be recovered.</li>
+        <li><strong>Legal and Expert Fees:</strong> Costs for legal advice and expert reports can sometimes be claimed.</li>
+      </ul>
+      <p>Typical compensation ranges in the UK:</p>
+      <ul>
+        <li><em>Minor disrepair</em> such as small damp patches: £100 - £500</li>
+        <li><em>Moderate cases</em> with health issues or longer duration: £1,000 - £5,000</li>
+        <li><em>Severe disrepair</em> causing major health problems or extensive damage: £5,000 - £15,000+</li>
+      </ul>
+      <p>Court awards vary based on evidence, landlord behaviour, and expert testimony.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Your Free Compensation Estimate">Get Your Free Compensation Estimate</a>
+    </div>
+
+    <!-- Section 15: Time Limits and Deadlines for Claims -->
+    <div class="section" aria-labelledby="claim-deadlines">
+      <h2 id="claim-deadlines">Time Limits and Deadlines for Housing Disrepair Claims</h2>
+      <p>It's important to act promptly when you discover housing disrepair. UK law generally sets a six-year limitation period to make a claim for damages from the date the disrepair occurred or was discovered. However:</p>
+      <ul>
+        <li>Claims related to personal injury caused by disrepair may have shorter limitation periods (typically three years).</li>
+        <li>Delays in action can reduce evidence quality and weaken your case.</li>
+        <li>Early reporting to your landlord and the council can support timely claims.</li>
+      </ul>
+      <p>Ignoring problems or waiting too long can limit your chances of success.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Check Your Claim Eligibility Now">Check Your Claim Eligibility Now</a>
+    </div>
+
+    <!-- Section 16: Role of Local Councils and Enforcement -->
+    <div class="section" aria-labelledby="local-council-role">
+      <h2 id="local-council-role">The Role of Local Councils in Housing Disrepair Cases</h2>
+      <p>Local councils are crucial in enforcing housing standards and protecting tenants. Their responsibilities include:</p>
+      <ul>
+        <li>Inspecting reported disrepair and hazards</li>
+        <li>Issuing improvement notices or hazard awareness notices to landlords</li>
+        <li>Taking enforcement actions such as fines or prosecutions</li>
+        <li>Offering tenant advice and support services</li>
+      </ul>
+      <p>If your landlord fails to act, contacting your local council’s housing department can prompt official inspections and enforcement, often resulting in quicker repairs.</p>
+
+      <a href="search-your-council.html" class="menu-cta" aria-label="Find Your Local Council">Find Your Local Council</a>
+    </div>
+
+    <!-- Section 17: Common Barriers and How to Overcome Them -->
+    <div class="section" aria-labelledby="common-barriers">
+      <h2 id="common-barriers">Common Barriers in Housing Disrepair Claims and How to Overcome Them</h2>
+      <p>Many tenants face challenges when pursuing housing disrepair claims. Common barriers include:</p>
+      <ul>
+        <li><strong>Landlord Denial:</strong> Landlords may deny issues or delay repairs to avoid liability.</li>
+        <li><strong>Proving Liability:</strong> Establishing landlord responsibility can be complicated if third parties manage the property.</li>
+        <li><strong>Gathering Evidence:</strong> Lack of documentation or expert reports weakens claims.</li>
+        <li><strong>Fear of Retaliation:</strong> Tenants worry about eviction or harassment for making complaints.</li>
+      </ul>
+      <p>Ways to overcome barriers:</p>
+      <ul>
+        <li>Keep detailed written records and photographic evidence</li>
+        <li>Engage legal experts early to build strong cases</li>
+        <li>Use council and regulatory bodies for support</li>
+        <li>Know your rights regarding protection from retaliation</li>
+      </ul>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Legal Help with Your Claim">Get Legal Help with Your Claim</a>
+    </div>
+
+    <!-- Section 18: Impact of Housing Disrepair on Health and Wellbeing -->
+    <div class="section" aria-labelledby="health-impact">
+      <h2 id="health-impact">How Housing Disrepair Affects Health and Wellbeing</h2>
+      <p>Housing disrepair is not just an inconvenience — it can seriously affect your physical and mental health. Problems like damp, mould, and poor heating can:</p>
+      <ul>
+        <li>Trigger or worsen respiratory conditions like asthma and bronchitis</li>
+        <li>Cause allergies and skin irritations</li>
+        <li>Lead to chronic stress, anxiety, and depression</li>
+        <li>Increase risk of accidents due to structural hazards</li>
+      </ul>
+      <p>Recognising these health impacts is important, as it can strengthen compensation claims and highlight the urgency of repairs.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Help With Health-Related Claims">Get Help With Health-Related Claims</a>
+    </div>
+
+    <!-- Section 19: Tenant Rights in Private and Social Housing -->
+    <div class="section" aria-labelledby="tenant-rights">
+      <h2 id="tenant-rights">Tenant Rights in Private and Social Housing</h2>
+      <p>Whether you rent privately or from a social housing provider, you have legal rights to a safe and well-maintained home. Social landlords often have additional duties and tenant support services, but the core legal obligations remain the same:</p>
+      <ul>
+        <li>Maintain the property in good repair</li>
+        <li>Ensure safety from hazards such as fire, gas leaks, or electrical faults</li>
+        <li>Provide timely repairs when issues are reported</li>
+      </ul>
+      <p>Knowing your rights empowers you to demand action regardless of your landlord type.</p>
+
+      <a href="your-rights.html" class="menu-cta" aria-label="Learn About Your Tenant Rights">Learn About Your Tenant Rights</a>
+    </div>
+
+    <!-- Section 20: How We Support You Throughout Your Claim -->
+    <div class="section" aria-labelledby="how-we-support">
+      <h2 id="how-we-support">How We Support You Throughout Your Housing Disrepair Claim</h2>
+      <p>At Home Justice Solutions, we guide you at every stage, providing:</p>
+      <ul>
+        <li>Free initial eligibility assessments</li>
+        <li>Clear advice on your rights and claim options</li>
+        <li>Help gathering and organising evidence</li>
+        <li>Referrals to specialist solicitors experienced in housing disrepair</li>
+        <li>Ongoing support to manage your claim and liaise with landlords and councils</li>
+      </ul>
+      <p>Our goal is to make the claim process as simple and stress-free as possible.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start Your Housing Disrepair Claim">Start Your Claim Today</a>
+    </div>
+    <!-- Section 21: Importance of Expert Reports in Disrepair Claims -->
+    <div class="section" aria-labelledby="expert-reports">
+      <h2 id="expert-reports">Why Expert Reports Matter in Housing Disrepair Claims</h2>
+      <p>Expert reports from qualified surveyors or environmental health professionals play a crucial role in supporting your housing disrepair claim. These reports:</p>
+      <ul>
+        <li>Provide an independent, professional assessment of the property’s condition</li>
+        <li>Identify the causes and extent of disrepair including damp, mould, structural faults, or heating failures</li>
+        <li>Estimate the urgency and health risks associated with the disrepair</li>
+        <li>Support your case with credible evidence accepted by courts or negotiation parties</li>
+      </ul>
+      <p>Without such detailed reports, it can be challenging to prove landlord liability or quantify damages.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get an Expert Report for Your Claim">Get an Expert Report for Your Claim</a>
+    </div>
+
+    <!-- Section 22: Negotiating With Your Landlord -->
+    <div class="section" aria-labelledby="negotiating-landlord">
+      <h2 id="negotiating-landlord">How to Negotiate with Your Landlord Over Disrepair</h2>
+      <p>Many disrepair claims are settled before court through negotiation. Tips for effective negotiation include:</p>
+      <ul>
+        <li>Communicate clearly and in writing about the issues and expected repairs</li>
+        <li>Present your evidence, including photos and expert reports</li>
+        <li>Request reasonable timescales for repairs to be completed</li>
+        <li>Consider mediation or Alternative Dispute Resolution (ADR) to avoid costly litigation</li>
+        <li>Seek legal advice if negotiations stall or your landlord refuses to act</li>
+      </ul>
+      <p>Good negotiation can save time, reduce stress, and often result in quicker repair and compensation.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Help Negotiating With Your Landlord">Get Help Negotiating With Your Landlord</a>
+    </div>
+
+    <!-- Section 23: Taking Legal Action for Housing Disrepair -->
+    <div class="section" aria-labelledby="legal-action">
+      <h2 id="legal-action">When and How to Take Legal Action for Housing Disrepair</h2>
+      <p>If your landlord refuses to carry out necessary repairs or compensation negotiations fail, you may need to take legal action. This involves:</p>
+      <ul>
+        <li>Submitting a formal claim through the County Court or First-tier Tribunal (for social housing)</li>
+        <li>Presenting your evidence, including expert reports and correspondence</li>
+        <li>Demonstrating the impact on your health and wellbeing</li>
+        <li>Requesting compensation and repair orders from the court</li>
+        <li>Potentially attending hearings or mediation sessions</li>
+      </ul>
+      <p>Legal action can be complex and time-consuming, so specialist housing disrepair solicitors can guide you through the process and improve your chances of success.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Legal Representation for Disrepair Claim">Get Legal Representation for Disrepair Claim</a>
+    </div>
+
+    <!-- Section 24: Understanding Your Rights if You Rent Privately -->
+    <div class="section" aria-labelledby="private-renters-rights">
+      <h2 id="private-renters-rights">Your Housing Disrepair Rights as a Private Tenant</h2>
+      <p>Private tenants have strong legal protections, including the right to:</p>
+      <ul>
+        <li>Live in a property free from hazards affecting health and safety</li>
+        <li>Receive timely repairs for issues like damp, mould, broken heating, or leaks</li>
+        <li>Use formal legal channels to enforce landlord obligations</li>
+        <li>Be protected from retaliatory eviction or harassment after making complaints</li>
+      </ul>
+      <p>If your landlord is unresponsive, you can escalate matters through local council enforcement or the courts.</p>
+
+      <a href="your-rights.html" class="menu-cta" aria-label="Learn Your Rights as a Private Tenant">Learn Your Rights as a Private Tenant</a>
+    </div>
+
+    <!-- Section 25: Understanding Your Rights if You Rent Social Housing -->
+    <div class="section" aria-labelledby="social-housing-rights">
+      <h2 id="social-housing-rights">Your Housing Disrepair Rights as a Social Housing Tenant</h2>
+      <p>Social housing tenants have similar legal rights, with additional protections such as:</p>
+      <ul>
+        <li>Stronger obligations on landlords to provide safe, habitable homes</li>
+        <li>Access to tenant support services and housing officers</li>
+        <li>Greater likelihood of council enforcement intervention</li>
+        <li>Possible alternative housing if repairs are extensive</li>
+      </ul>
+      <p>Reporting disrepair through your housing provider and local council is essential to prompt action.</p>
+
+      <a href="your-rights.html" class="menu-cta" aria-label="Learn Your Rights as a Social Housing Tenant">Learn Your Rights as a Social Housing Tenant</a>
+    </div>
+
+    <!-- Section 26: COVID-19 Impact on Housing Disrepair Claims -->
+    <div class="section" aria-labelledby="covid-impact">
+      <h2 id="covid-impact">How COVID-19 Has Affected Housing Disrepair Claims</h2>
+      <p>The COVID-19 pandemic introduced challenges to housing disrepair repairs and claims, including:</p>
+      <ul>
+        <li>Delays in landlord repairs due to lockdowns and social distancing</li>
+        <li>Backlogs in local council inspections and enforcement actions</li>
+        <li>Temporary government protections preventing some evictions</li>
+        <li>Increased awareness of the importance of safe housing for health</li>
+      </ul>
+      <p>Despite challenges, tenants retain full legal rights and can still make claims for compensation and repairs.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Help with COVID-19 Housing Disrepair Issues">Get Help with COVID-19 Housing Disrepair Issues</a>
+    </div>
+
+    <!-- Section 27: Alternative Dispute Resolution in Disrepair Cases -->
+    <div class="section" aria-labelledby="adr-dispute-resolution">
+      <h2 id="adr-dispute-resolution">Alternative Dispute Resolution (ADR) in Housing Disrepair Cases</h2>
+      <p>ADR methods like mediation and arbitration provide quicker, less costly alternatives to court for resolving housing disrepair disputes. Benefits include:</p>
+      <ul>
+        <li>Less adversarial, more collaborative approaches</li>
+        <li>Confidentiality and privacy</li>
+        <li>Flexibility in timing and process</li>
+        <li>Potentially faster repair outcomes and compensation agreements</li>
+      </ul>
+      <p>Many landlords and councils now encourage ADR before formal legal proceedings.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Explore Alternative Dispute Resolution Options">Explore Alternative Dispute Resolution Options</a>
+    </div>
+    <!-- Section 28: Common Misconceptions About Housing Disrepair Claims -->
+    <div class="section" aria-labelledby="common-misconceptions">
+      <h2 id="common-misconceptions">Common Misconceptions About Housing Disrepair Claims</h2>
+      <p>There are many myths that can discourage tenants from pursuing their housing disrepair rights. Understanding the facts is vital:</p>
+      <ul>
+        <li><strong>Myth:</strong> "I can’t claim because I’m on benefits." <br /> <strong>Fact:</strong> Housing disrepair claims are about your living conditions, not your income. You have the right to a safe home regardless of benefits.</li>
+        <li><strong>Myth:</strong> "I’ll get evicted if I complain." <br /> <strong>Fact:</strong> Retaliatory eviction is illegal. The law protects tenants from being evicted just for asserting their rights.</li>
+        <li><strong>Myth:</strong> "Claims take years and aren’t worth it." <br /> <strong>Fact:</strong> Many claims settle quickly, especially with proper legal support. Compensation and repairs make a big difference.</li>
+        <li><strong>Myth:</strong> "I don’t need a solicitor for my claim." <br /> <strong>Fact:</strong> Expert legal advice improves your chances of success and helps navigate complex rules.</li>
+      </ul>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Legal Advice on Housing Disrepair">Get Legal Advice on Housing Disrepair</a>
+    </div>
+
+    <!-- Section 29: Protecting Your Health and Wellbeing -->
+    <div class="section" aria-labelledby="health-wellbeing">
+      <h2 id="health-wellbeing">Protecting Your Health and Wellbeing in Disrepair Situations</h2>
+      <p>Living in a property with damp, mould, or other disrepair can seriously affect your physical and mental health. Take these steps:</p>
+      <ul>
+        <li>Keep records of any health issues linked to your living conditions</li>
+        <li>Visit your GP and get medical reports to support your claim</li>
+        <li>Contact local health or housing authorities if conditions are hazardous</li>
+        <li>Seek support from tenant organisations or charities</li>
+      </ul>
+      <p>Your health is paramount, and disrepair claims often include compensation for health impacts.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Support for Health-Related Disrepair Claims">Get Support for Health-Related Disrepair Claims</a>
+    </div>
+
+    <!-- Section 30: Summary: How Housing Disrepair Claims Work -->
+    <div class="section" aria-labelledby="summary-how-it-works">
+      <h2 id="summary-how-it-works">Summary: How Housing Disrepair Claims Work</h2>
+      <p>Understanding the process makes pursuing a housing disrepair claim less daunting:</p>
+      <ol>
+        <li>Identify disrepair issues and notify your landlord in writing</li>
+        <li>Gather evidence: photos, videos, and expert reports</li>
+        <li>Request repairs and allow reasonable time for action</li>
+        <li>Contact your local council if repairs are ignored</li>
+        <li>Seek legal advice and consider Alternative Dispute Resolution</li>
+        <li>Make a formal claim for compensation if necessary</li>
+        <li>Negotiate or proceed to court for resolution</li>
+      </ol>
+      <p>Throughout, maintaining documentation and professional support increases your chances of success.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start Your Housing Disrepair Claim Today">Start Your Housing Disrepair Claim Today</a>
+    </div>
+
+    <!-- Section 31: Contact Us for Expert Housing Disrepair Help -->
+    <div class="section" aria-labelledby="contact-experts">
+      <h2 id="contact-experts">Contact Home Justice Solutions for Expert Housing Disrepair Help</h2>
+      <p>If you’re dealing with housing disrepair issues such as damp, mould, broken heating, or unsafe conditions, our experienced team can guide you every step of the way. We offer free eligibility checks and work on a no win, no fee basis to ensure you get the support you deserve.</p>
+      <p>Our specialist solicitors understand the complexities of housing disrepair law and can help you secure timely repairs and rightful compensation.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Contact Home Justice Solutions">Contact Us Today for a Free Consultation</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Home Justice Solutions. We connect tenants with specialist solicitors for housing disrepair claims on a no win, no fee basis.</p>
+  </footer>
+
+  <script>
+    // Menu toggle script
     function toggleMenu() {
       const menu = document.getElementById("menuContent");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+        menu.style.alignItems = "center";
+      }
     }
-    window.addEventListener("click", function (e) {
+    window.addEventListener("click", function(e) {
       const menu = document.getElementById("menuContent");
       const btn = document.getElementById("menuButton");
       if (!menu.contains(e.target) && e.target !== btn) {
@@ -125,123 +510,6 @@
       }
     });
   </script>
-</head>
-<body>
-
-  <header>
-    <img src="logo.png" alt="Home Justice Solutions Logo" />
-    <h1>Home Justice Solutions</h1>
-    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
-  </header>
-
-  <div class="menu-content" id="menuContent">
-    <a href="index.html">Home</a>
-    <a href="about-us.html">About Us</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="claim-types.html">Claim Types</a>
-    <a href="tenant-rights.html">Your Rights</a>
-    <a href="faq.html">FAQs</a>
-    <a href="search-your-council.html">Find Your Council</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="https://form.jotform.com/250594347028056">Start a Claim</a>
-  </div>
-
-  <div class="container">
-<div class="container">
-  <div class="section">
-    <h1>How the Housing Disrepair Claim Process Works (UK Guide)</h1>
-    <p>Living in unsafe or uninhabitable housing conditions? You’re not alone. Thousands of tenants across the UK live with unresolved <a href="claim-types.html">mould, damp, leaks, broken boilers, pests, or dangerous electrics</a> — often ignored by their landlord.</p>
-    <p>At <strong>Home Justice Solutions</strong>, we’ve made it quick and simple to get legal help. We connect you with SRA-regulated solicitors who specialise in <strong>housing disrepair claims</strong>. And the best part? It's completely free to check if you qualify.</p>
-    <p>Below, we walk you through each step of the process — from the initial form to receiving <strong>repairs and compensation</strong>.</p>
-  </div>
-
-  <div class="section">
-    <h2>Step 1: Complete a Free Online Claim Check</h2>
-    <p>The first step is easy: click the <strong>“Check If You Qualify”</strong> button and answer a few quick questions about your living situation. This takes under 60 seconds, and you won’t need to speak to anyone on the phone unless you choose to.</p>
-    <p>We ask things like:</p>
-    <ul>
-      <li>Who your landlord is (council or housing association)</li>
-      <li>What types of disrepair are present (e.g. leaks, mould, pests)</li>
-      <li>How long the issue has been going on</li>
-      <li>Whether you’ve reported it to your landlord</li>
-    </ul>
-    <p>Your answers help determine if you meet the basic legal requirements for a housing disrepair claim. It's quick, secure and 100% free.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Free Check</a>
-  </div>
-
-  <div class="section">
-    <h2>Step 2: Speak to a Housing Disrepair Solicitor</h2>
-    <p>If your case is eligible, you’ll be referred to an experienced housing disrepair solicitor. They’ll contact you to confirm your details and assess your claim further. You may be asked to provide:</p>
-    <ul>
-      <li>Photos of the disrepair (e.g. black mould, water damage)</li>
-      <li>Copies of emails or letters you've sent to your landlord</li>
-      <li>Medical records if your health has been affected</li>
-    </ul>
-    <p>From there, the solicitor will decide if your case meets the legal criteria to proceed. This entire step usually happens within 1–3 working days after your initial submission.</p>
-  </div>
-
-  <div class="section">
-    <h2>Step 3: Claim Accepted – Repairs and Compensation Begin</h2>
-    <p>If your claim is accepted, the solicitor will send formal notice to your landlord demanding that repairs are carried out within a set timeframe. If they continue to ignore the issue, legal action can begin to force them to comply.</p>
-    <p>In addition to repairs, your solicitor will also seek <strong>financial compensation</strong> for the inconvenience, distress, and health impacts caused by your landlord’s failure to act. You could be entitled to:</p>
-    <ul>
-      <li><strong>£1,000 to £10,000+</strong> depending on the level of disrepair</li>
-      <li>Refunds of part of your rent if the property was unfit to live in</li>
-      <li>Costs for medical issues, damage to belongings, or missed work</li>
-    </ul>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Claim Repairs & Compensation</a>
-  </div>
-
-  <div class="section">
-    <h2>Step 4: No Win, No Fee Guarantee</h2>
-    <p>All cases handled through Home Justice Solutions are managed on a <strong>no win, no fee</strong> basis. That means:</p>
-    <ul>
-      <li>✅ You pay nothing upfront</li>
-      <li>✅ Your legal fees are taken from your compensation</li>
-    </ul>
-    <p>This gives you peace of mind knowing there’s no financial risk. You can pursue your case without worrying about upfront costs or unexpected bills.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">See If You Qualify Risk-Free</a>
-  </div>
-
-  <div class="section">
-    <h2>Is This a Legitimate Legal Process?</h2>
-    <p>Absolutely. Your case will be handled by a regulated housing disrepair solicitor in the UK. These professionals are experts in tenancy law and act under the rules set by the <strong>SRA (Solicitors Regulation Authority)</strong>.</p>
-    <p>Under UK law, your landlord has a duty to keep your home safe, secure, and free from health hazards. If they ignore you, the law is on your side — and we’re here to help you take advantage of it.</p>
-    <p>Read more on <a href="tenant-rights.html">Your Rights</a> or explore our <a href="faq.html">FAQs</a> for more reassurance about the process.</p>
-  </div>
-
-  <div class="section">
-    <h2>Why Use Home Justice Solutions?</h2>
-    <p>We help you take action without stress, delay, or confusion. Here’s why more tenants choose us every day:</p>
-    <ul>
-      <li>✅ Quick online form with no phone calls required</li>
-      <li>✅ No win, no fee claim process</li>
-      <li>✅ We only work with regulated disrepair solicitors</li>
-      <li>✅ Fast response times and hands-on support</li>
-    </ul>
-    <p>We are not a law firm — but we help you connect directly with those who are. It’s time to stand up to housing neglect and demand the repairs and justice you deserve.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-  </div>
-
-  <div class="section">
-    <h2>Helpful Resources</h2>
-    <p>Want to learn more before starting your claim? Explore these helpful pages:</p>
-    <ul>
-      <li><a href="about-us.html">About Home Justice Solutions</a></li>
-      <li><a href="claim-types.html">Types of Housing Disrepair We Cover</a></li>
-      <li><a href="tenant-rights.html">Your Rights as a Renter</a></li>
-      <li><a href="faq.html">FAQs About Housing Disrepair Claims</a></li>
-      <li><a href="search-your-council.html">Search for Your Council</a></li>
-    </ul>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify Now</a>
-  </div>
-</div> <!-- end container -->
-
-  <footer>
-    © 2025 Home Justice Solutions. All rights reserved.<br />
-    We are not a firm of solicitors. We connect tenants with housing disrepair specialists. This website does not provide legal advice.
-  </footer>
 
 </body>
 </html>
