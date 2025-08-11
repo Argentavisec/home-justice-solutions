@@ -4,80 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu - Home Justice Solutions</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9ff;
-      color: #222;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      color: #7c3aed;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .menu-content {
-      background: #ede4ff;
-      border-radius: 12px;
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
-    }
-    .menu-content a {
-      display: block;
-      padding: 12px 15px;
-      margin: 8px 0;
-      text-decoration: none;
-      color: #4c1d95;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
-      border: 2px solid transparent;
-    }
-    .menu-content a:hover {
-      background-color: #7c3aed;
-      color: white;
-      border-color: #6b21a8;
-    }
-    footer {
-      text-align: center;
-      color: #555;
-      margin-top: 40px;
-      font-size: 14px;
-    }
-    @media (max-width: 480px) {
-      .menu-content {
-        max-width: 90%;
-        padding: 15px;
-      }
-      .menu-content a {
-        padding: 10px;
-        font-size: 16px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>Menu - Home Justice Solutions</h1>
+  <div style="text-align: center; margin: 15px 0;">
+    <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    <a href="https://form.jotform.com/250594347028056" class="menu-cta" style="margin-left: 10px;">Check If You Qualify</a>
+  </div>
 
-  <nav class="menu-content" id="menuContent">
-    <a href="index.html">Home</a>
-    <a href="about-us.html">About Us</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="claim-types.html">Claim Types</a>
-    <a href="tenant-rights.html">Your Rights</a>
-    <a href="faq.html">FAQs</a>
-    <a href="search-your-council.html">Find Your Council</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="https://form.jotform.com/250594347028056" target="_blank" rel="noopener noreferrer">Start a Claim</a>
+  <nav class="menu-content" id="menuContent" aria-label="Site Navigation Menu">
+    <div class="menu-section">
+      <h4>About Us</h4>
+      <a href="about-us.html">About Home Justice Solutions</a>
+      <a href="what-we-do.html">What We Do</a>
+      <a href="breathing-space.html">Breathing Space</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+
+    <div class="menu-section">
+      <h4>Housing Disrepair Claims</h4>
+      <a href="index.html">Home</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="claim-types.html">Claim Types</a>
+      <a href="your-rights.html">Your Rights</a>
+      <a href="tenant-rights.html">Tenant Rights</a>
+      <a href="search-your-council.html">Find Your Council</a>
+      <a href="faq.html">FAQs</a>
+    </div>
+
+    <div class="menu-section">
+      <h4>Start Your Claim</h4>
+      <a href="https://form.jotform.com/250594347028056" target="_blank" rel="noopener noreferrer">Start a Housing Disrepair Claim</a>
+    </div>
+
+    <div class="menu-section">
+      <h4>Contact & Support</h4>
+      <a href="contact.html">Contact Us</a>
+      <a href="testimonials.html">Testimonials</a>
+    </div>
   </nav>
 
-  <footer>
-    © 2025 Home Justice Solutions
-  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuContent");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+
+    // Optional: close menu if clicking outside
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById("menuContent");
+      const btn = document.getElementById("menuButton");
+      if (!menu.contains(e.target) && e.target !== btn) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
 
 </body>
 </html>

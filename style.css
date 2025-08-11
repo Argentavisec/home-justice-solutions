@@ -1,0 +1,185 @@
+/* style.css */
+
+/* Reset and base */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9ff;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header / Banner */
+.banner {
+  background: #7c3aed;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 60px;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Menu Toggle Button */
+.btn-menu {
+  background: #4c1d95;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-menu:hover {
+  background: #38136a;
+}
+
+/* CTA Button in header */
+.menu-cta {
+  background: #06b6d4;
+  color: #000 !important;
+  font-weight: bold;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.menu-cta:hover {
+  background: #04a1bb;
+}
+
+/* Menu Content Container */
+.menu-content {
+  display: none;
+  flex-direction: column;
+  background: #ede4ff;
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Menu Section Columns */
+.menu-section {
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.menu-section h4 {
+  color: #4c1d95;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-left: 10px;
+}
+
+/* Links inside menu */
+.menu-content a {
+  display: block;
+  color: #4c1d95;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.menu-content a:hover,
+.menu-content a:focus {
+  background: #7c3aed;
+  color: white;
+  outline: none;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 15px;
+  flex: 1;
+}
+
+/* Content Sections */
+.section {
+  background: #ede4ff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(124,58,237,0.1);
+}
+
+.section h1,
+.section h2 {
+  color: #4c1d95;
+  margin-top: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+  background: #f9f9ff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .top-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu-content {
+    width: 90vw;
+    max-width: 90vw;
+  }
+  .menu-section h4 {
+    padding-left: 0;
+  }
+  .menu-content a {
+    padding-left: 20px;
+  }
+  .menu-cta {
+    width: 90%;
+    max-width: 90%;
+    padding: 12px;
+    font-size: 15px;
+    display: block;
+    margin: 10px auto;
+  }
+}
