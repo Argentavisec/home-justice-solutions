@@ -105,13 +105,15 @@ h1 {
 }
 
 .menu-section h4 {
-  color: #4c1d95;
+  color: #1a0d4d; /* Very dark purple */
   font-size: 16px;
   margin-bottom: 8px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding-left: 10px;
+  border-top: 1px solid #ddd; /* line above header */
+  padding-top: 4px;           /* space between line and text */
 }
 
 /* Links inside menu */
@@ -176,21 +178,14 @@ footer {
   .menu-content {
     width: 90vw;
     max-width: 90vw;
-
-.menu-section h4 {
-  color: #1a0d4d; /* Very dark purple */
-  font-weight: bold;
-}
-
-.menu-section h4 {
-  color: #1a0d4d;
-  font-weight: bold;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
-}
-
-
+  }
+  .menu-section h4 {
+    color: #1a0d4d; /* Very dark purple */
+    font-weight: bold;
+    margin-bottom: 8px;
+    border-top: 1px solid #ddd; /* line above header */
+    padding-top: 4px;
+  }
   .menu-content a {
     padding-left: 20px;
   }
@@ -201,6 +196,6 @@ footer {
     font-size: 15px;
     display: block;
     margin: 10px auto;
-    height: auto;      /* override fixed height on mobile for better flexibility */
+    height: auto; /* override fixed height on mobile for better flexibility */
   }
 }
