@@ -2,113 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Home Justice Solutions</title>
-  <meta name="description" content="Learn more about Home Justice Solutions, a UK service helping council and housing association tenants claim free repairs and compensation for housing disrepair.">
-  <meta name="keywords" content="housing disrepair help, council tenant claims, mould repairs, landlord neglect, Home Justice Solutions about">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f9f9ff;
-      color: #222;
-    }
-    header {
-      background-color: #7c3aed;
-      text-align: center;
-      padding: 20px 10px;
-    }
-    header img {
-      max-height: 80px;
-    }
-    header h1 {
-      color: white;
-      font-weight: bold;
-      font-size: 24px;
-      margin: 10px 0;
-    }
-    .menu-toggle {
-      background: #5b21b6;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 10px 5px;
-    }
-    .menu-cta {
-      display: inline-block;
-      background-color: #06b6d4;
-      color: black;
-      padding: 10px 18px;
-      font-weight: bold;
-      font-size: 16px;
-      border-radius: 8px;
-      text-align: center;
-      text-decoration: none;
-      margin: 10px 5px;
-      max-width: 250px;
-      word-wrap: break-word;
-    }
-    .menu-content {
-      display: none;
-      background: #ede4ff;
-      text-align: center;
-      padding: 20px;
-    }
-    .menu-content a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: #222;
-      font-weight: bold;
-    }
-    .menu-content a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      padding: 20px;
-    }
-    .section {
-      background-color: #ede4ff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .section h1, .section h2 {
-      color: #4c1d95;
-    }
-    .section a.menu-cta {
-      display: inline-block;
-      text-align: center;
-      margin-top: 20px;
-    }
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #555;
-      padding: 20px;
-    }
-    @media (max-width: 600px) {
-      .menu-toggle,
-      .menu-cta {
-        width: 90%;
-        max-width: 90%;
-        padding: 12px;
-        font-size: 15px;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Fresh Start Debt Support | Who We Are & How We Help You</title>
+  <meta name="description" content="Learn about Fresh Start Debt Support, our mission, the debt solutions we offer, and how we help thousands of clients regain financial freedom." />
+  <meta name="keywords" content="Fresh Start Debt Support, debt help, IVA company, debt consolidation, bankruptcy help, debt management plans, debt advice UK" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Banner Header -->
+  <div class="banner">
+    <div class="top-bar">
+      <img src="logo.png" alt="Fresh Start Debt Support Logo" class="logo" />
+      <h1>About Fresh Start Debt Support: Helping You Take Control of Debt</h1>
+    </div>
+  </div>
+
+  <!-- Menu Placeholder -->
+  <div id="menu-placeholder"></div>
   <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu-placeholder").innerHTML = data);
+  </script>
+
+  <main class="container">
+
+    <!-- Section: Who We Are -->
+    <div class="section" aria-labelledby="who-we-are">
+      <h2 id="who-we-are">Who We Are</h2>
+      <p>Fresh Start Debt Support is a trusted UK-based debt advice company dedicated to helping individuals and families struggling with unsecured debts. We have helped thousands of clients across England, Scotland, and Wales find effective debt solutions tailored to their unique circumstances.</p>
+      <p>Our expert team is made up of qualified debt advisors and insolvency practitioners with years of experience guiding clients through difficult financial situations. We work with top insolvency firms and legal experts to ensure you receive reliable, professional support from start to finish.</p>
+      <p>Our mission is simple: to provide clear, impartial debt advice and support that empowers you to regain control of your finances and rebuild your future.</p>
+
+      <a href="contact.html" class="menu-cta" aria-label="Contact Fresh Start Debt Support">Contact Us Today</a>
+    </div>
+
+    <!-- Section: Our Debt Solutions -->
+    <div class="section" aria-labelledby="debt-solutions">
+      <h2 id="debt-solutions">Our Debt Solutions</h2>
+      <p>At Fresh Start Debt Support, we offer a wide range of debt solutions designed to fit your needs, whether you have credit card debt, personal loans, payday loans, council tax arrears, or other unsecured debts. Our main services include:</p>
+      <ul>
+        <li><strong>Individual Voluntary Arrangements (IVA):</strong> A formal insolvency agreement allowing you to repay a portion of your debt over a fixed term, typically five years, while protecting your assets.</li>
+        <li><strong>Debt Management Plans (DMP):</strong> An informal agreement to make reduced monthly payments to your creditors through a debt management company.</li>
+        <li><strong>Debt Consolidation:</strong> Combining multiple debts into one manageable monthly payment, often at a lower interest rate.</li>
+        <li><strong>Bankruptcy Advice:</strong> Guidance on declaring bankruptcy when other solutions are not viable, including the consequences and benefits.</li>
+        <li><strong>Trust Deeds (Scotland):</strong> A legal debt solution for Scottish residents similar to an IVA.</li>
+      </ul>
+      <p>Our debt advisors carefully assess your financial situation to recommend the most appropriate option and guide you through the application and management process.</p>
+
+      <a href="debt-solutions.html" class="menu-cta" aria-label="Explore Our Debt Solutions">Learn More About Our Solutions</a>
+    </div>
+
+    <!-- Section: How We Help -->
+    <div class="section" aria-labelledby="how-we-help">
+      <h2 id="how-we-help">How We Help You</h2>
+      <p>We understand how overwhelming debt problems can be. That’s why our approach focuses on providing compassionate, no-obligation advice that puts you at ease. Our debt experts:</p>
+      <ul>
+        <li>Offer a free initial debt assessment to evaluate your current financial status.</li>
+        <li>Help you understand your rights and available options clearly.</li>
+        <li>Work with you to create a personalised debt plan suited to your income and expenses.</li>
+        <li>Negotiate with creditors to reduce interest, freeze charges, or write off portions of debt.</li>
+        <li>Provide ongoing support and updates throughout your debt solution journey.</li>
+      </ul>
+      <p>We partner with specialist insolvency practitioners and companies committed to transparent, ethical debt advice.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Free Debt Advice">Get Your Free Debt Advice</a>
+    </div>
+
+    <!-- Section: Why Choose Us -->
+    <div class="section" aria-labelledby="why-choose-us">
+      <h2 id="why-choose-us">Why Choose Fresh Start Debt Support?</h2>
+      <p>Choosing the right debt advice provider can make all the difference. Here’s why thousands trust Fresh Start Debt Support:</p>
+      <ul>
+        <li><strong>No Win, No Fee:</strong> We offer many services on a no win, no fee basis so you pay only if your debt solution is approved.</li>
+        <li><strong>Experienced Advisors:</strong> Our team has a proven track record helping clients find debt relief tailored to their needs.</li>
+        <li><strong>Impartial and Transparent:</strong> We provide unbiased advice with no hidden fees or pressures.</li>
+        <li><strong>Wide Range of Solutions:</strong> From IVAs to bankruptcy, we offer comprehensive options so you get the right help.</li>
+        <li><strong>Support Across the UK:</strong> Serving clients nationwide including Scotland, England, and Wales.</li>
+        <li><strong>Client Testimonials:</strong> We pride ourselves on positive client feedback and successful outcomes.</li>
+      </ul>
+
+      <a href="testimonials.html" class="menu-cta" aria-label="Read Client Testimonials">Read Our Client Testimonials</a>
+    </div>
+
+    <!-- Section: Debt Advice for Specific Debts -->
+    <div class="section" aria-labelledby="debt-advice-specific">
+      <h2 id="debt-advice-specific">Debt Advice for Specific Debts</h2>
+      <p>We provide expert advice tailored to various types of debt. Some common debts we help with include:</p>
+      <ul>
+        <li>Credit card debts</li>
+        <li>Payday loans</li>
+        <li>Council tax arrears</li>
+        <li>Utility debts</li>
+        <li>Personal loans and overdrafts</li>
+        <li>Loan sharks and illegal lending</li>
+      </ul>
+      <p>Our debt advisors help prioritise repayments and negotiate with creditors to ease your financial burden.</p>
+
+      <a href="debt-advice.html" class="menu-cta" aria-label="Get Debt Advice for Your Specific Debt">Get Tailored Debt Advice</a>
+    </div>
+
+    <!-- Section: Locations We Serve -->
+    <div class="section" aria-labelledby="locations-we-serve">
+      <h2 id="locations-we-serve">Locations We Serve</h2>
+      <p>Fresh Start Debt Support offers personalised debt advice and support across the UK. Whether you’re in London, Birmingham, Manchester, Glasgow, or a smaller town, our experts are ready to help you. We understand local regulations and can guide you through the right debt solutions based on your area.</p>
+      <p>We frequently work with clients from:</p>
+      <ul>
+        <li>England (all regions)</li>
+        <li>Scotland (including Trust Deeds)</li>
+        <li>Wales</li>
+        <li>Northern Ireland (referrals available)</li>
+      </ul>
+
+      <a href="contact.html" class="menu-cta" aria-label="Find Local Debt Support">Find Local Debt Support</a>
+    </div>
+
+    <!-- Section: Our Partners and Network -->
+    <div class="section" aria-labelledby="our-partners">
+      <h2 id="our-partners">Our Partners and Network</h2>
+      <p>We work closely with a wide network of specialist insolvency practitioners, debt management companies, and legal advisors to ensure you receive the best possible service. Our partners are carefully vetted and committed to ethical debt solutions.</p>
+      <p>Partnering allows us to offer services such as IVAs, bankruptcy applications, trust deeds, and debt management plans through trusted providers who comply with FCA regulations and government standards.</p>
+
+      <a href="partners.html" class="menu-cta" aria-label="Learn about our partners">Learn More About Our Partners</a>
+    </div>
+
+    <!-- Section: How to Get Started -->
+    <div class="section" aria-labelledby="how-to-get-started">
+      <h2 id="how-to-get-started">How to Get Started with Fresh Start Debt Support</h2>
+      <p>Starting your journey towards debt relief is simple. Follow these steps:</p>
+      <ol>
+        <li>Complete our free online eligibility checker to see what solutions you qualify for.</li>
+        <li>Speak to one of our friendly debt advisors for personalised advice.</li>
+        <li>Choose the debt solution that fits your needs.</li>
+        <li>Receive ongoing support and management until your debt is resolved.</li>
+      </ol>
+      <p>We’re here to guide you every step of the way and make the process as stress-free as possible.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start your free debt check">Start Your Free Debt Check</a>
+    </div>
+
+    <!-- Section: FAQs -->
+    <div class="section" aria-labelledby="about-faqs">
+      <h2 id="about-faqs">Frequently Asked Questions About Fresh Start Debt Support</h2>
+      <h3>Are your services free?</h3>
+      <p>We provide free initial advice and eligibility checks. Some debt solutions may involve fees which we fully disclose before proceeding.</p>
+      <h3>How long does the process take?</h3>
+      <p>Timescales vary depending on the debt solution chosen but typically range from months to a few years.</p>
+      <h3>Can you help if I have bad credit?</h3>
+      <p>Yes, we assist clients with all credit profiles and tailor debt solutions accordingly.</p>
+
+      <a href="faq.html" class="menu-cta" aria-label="View full FAQs">View More FAQs</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Fresh Start Debt Support. Helping UK residents regain financial freedom with trusted debt advice and solutions.</p>
+  </footer>
+
+  <script>
+    // Menu toggle script
     function toggleMenu() {
       const menu = document.getElementById("menuContent");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+        menu.style.alignItems = "center";
+      }
     }
-    window.addEventListener("click", function (e) {
+    window.addEventListener("click", function(e) {
       const menu = document.getElementById("menuContent");
       const btn = document.getElementById("menuButton");
       if (!menu.contains(e.target) && e.target !== btn) {
@@ -116,133 +181,6 @@
       }
     });
   </script>
-</head>
-
-<body>
-
-  <header>
-    <img src="logo.png" alt="Home Justice Solutions Logo" />
-    <h1>Home Justice Solutions</h1>
-    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
-  </header>
-
-  <div class="menu-content" id="menuContent">
-    <a href="index.html">Home</a>
-    <a href="about-us.html">About Us</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="claim-types.html">Claim Types</a>
-    <a href="tenant-rights.html">Your Rights</a>
-    <a href="faq.html">FAQs</a>
-    <a href="search-your-council.html">Find Your Council</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="https://form.jotform.com/250594347028056">Start a Claim</a>
-  </div>
-
-  <div class="container">
-<div class="section">
-  <h1>About Home Justice Solutions</h1>
-  <p>At <strong>Home Justice Solutions</strong>, we’re committed to standing up for tenants living in poor conditions. Too many families across the UK are left struggling in homes plagued by <strong>mould, leaks, damp, heating failures</strong> and even structural damage — while landlords ignore repeated complaints.</p>
-  <p>We specialise in helping <strong>council and housing association tenants</strong> claim <a href="claim-types.html">free repairs and compensation</a> when landlords fail to maintain the property. Our team connects tenants with regulated housing disrepair specialists who understand your rights and fight to ensure justice is served.</p>
-  <p>Whether you're dealing with a long-standing issue or have just begun to experience disrepair, we make it easy to <a href="how-it-works.html">start a claim</a> in minutes. You can <a href="https://form.jotform.com/250594347028056">check if you qualify here</a>.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-</div>
-
-<div class="section">
-  <h2>Who We Help</h2>
-  <p>We proudly support tenants across <strong>England, Wales, and Scotland</strong> who rent their homes from:</p>
-  <ul>
-    <li>Local authorities / councils</li>
-    <li>Housing associations</li>
-    <li>Registered social landlords</li>
-  </ul>
-  <p>If you've made your landlord aware of an issue and they’ve failed to act within a reasonable time, you may be eligible to file a <strong>housing disrepair claim</strong>.</p>
-  <p>We help tenants suffering from a range of issues, including:</p>
-  <ul>
-    <li>Black mould, mildew, or severe dampness</li>
-    <li>Leaking roofs or ceilings</li>
-    <li>Broken windows, doors, or unsafe staircases</li>
-    <li>Rodent or pest infestations</li>
-    <li>Electrical hazards or water damage</li>
-    <li>Lack of central heating or hot water</li>
-  </ul>
-  <p>Visit our <a href="claim-types.html">Claim Types</a> page to see the full list of issues that could qualify.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-</div>
-
-<div class="section">
-  <h2>What Is Housing Disrepair?</h2>
-  <p>Housing disrepair refers to any part of your rented home that is in poor condition and hasn’t been fixed by your landlord. This can impact your health, safety, and quality of life.</p>
-  <p>If you’ve already informed your landlord and given them enough time to respond but they’ve failed to act, they may be breaching their legal duties. In these cases, tenants may be entitled to:</p>
-  <ul>
-    <li>Mandatory repairs</li>
-    <li>Financial compensation</li>
-    <li>Ongoing legal support</li>
-  </ul>
-  <p>Visit our <a href="your-rights.html">Your Rights</a> page to better understand what your landlord is legally obligated to do under the Landlord and Tenant Act 1985 and the Homes (Fitness for Human Habitation) Act 2018.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-</div>
-
-<div class="section">
-  <h2>Why Use Home Justice Solutions?</h2>
-  <p>There are many reasons why UK tenants choose Home Justice Solutions:</p>
-  <ul>
-    <li>✅ Completely free to check if you qualify in just 60 seconds</li>
-    <li>✅ No calls or paperwork – use our fast <a href="https://form.jotform.com/250594347028056">online form</a></li>
-    <li>✅ We work with regulated housing disrepair solicitors</li>
-    <li>✅ No win, no fee – you only pay if your claim is successful</li>
-    <li>✅ Dedicated support and clear, jargon-free guidance</li>
-  </ul>
-  <p>We’re not a law firm ourselves — we’re a trusted service that helps you connect with experienced housing solicitors who can build your case. That means less stress, faster results, and the best chance of a successful outcome.</p>
-  <p>Don’t just take our word for it — see what other tenants say on our <a href="faq.html">FAQs</a> page.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-</div>
-
-<div class="section">
-  <h2>How It Works</h2>
-  <p>We’ve made the claim process as simple and streamlined as possible. Here’s what happens:</p>
-  <ol>
-    <li><strong>You fill out a short claim form</strong> to check your eligibility</li>
-    <li><strong>We review your situation</strong> and connect you with a legal expert</li>
-    <li><strong>Your solicitor contacts you</strong> and begins building your case</li>
-    <li><strong>You get your home repaired</strong> and may receive compensation</li>
-  </ol>
-  <p>This process is fast, discreet, and entirely online. Learn more on our <a href="how-it-works.html">How It Works</a> page.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-</div>
-
-<div class="section">
-  <h2>Your Legal Rights as a Tenant</h2>
-  <p>Tenants have the right to live in a safe, habitable home. Landlords are legally required to carry out necessary repairs in a reasonable time. These laws apply to council tenants, housing association tenants, and private renters alike.</p>
-  <p>Common tenant rights include:</p>
-  <ul>
-    <li>The right to a home free from damp and mould</li>
-    <li>The right to working heating, electricity, and water</li>
-    <li>The right to a structurally sound building</li>
-    <li>The right to have repairs done in a timely fashion</li>
-  </ul>
-  <p>Visit our <a href="your-rights.html">Your Rights</a> page to learn more about the legal protections available to you.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-</div>
-
-<div class="section">
-  <h2>Find Your Local Council</h2>
-  <p>Not sure who your landlord is? Many housing disrepair issues are handled through the local authority or housing association. You can use our searchable list to locate your landlord or council directly.</p>
-  <p><a href="search-your-council.html">Search your council here</a> to get the details you need before starting your claim.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-</div>
-
-<div class="section">
-  <h2>Ready to Start Your Claim?</h2>
-  <p>If your landlord has ignored repair requests, you’re not alone — and you’re not powerless. Our claim process is here to put things right quickly and professionally.</p>
-  <p>There’s no cost to find out if you qualify, and we aim to connect you with a solicitor the same day. You could be entitled to thousands in compensation for the inconvenience and health risks caused by your landlord’s negligence.</p>
-  <p><a href="https://form.jotform.com/250594347028056">Start your claim now</a> or visit our <a href="faq.html">FAQ page</a> to learn more.</p>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Your Claim Today</a>
-</div>
-  <footer>
-    © 2025 Home Justice Solutions. All rights reserved.<br />
-    We are not a firm of solicitors. We connect tenants with housing disrepair specialists. This website does not provide legal advice.
-  </footer>
 
 </body>
 </html>
