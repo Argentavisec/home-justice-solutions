@@ -3,61 +3,158 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Menu - Home Justice Solutions</title>
+  <title>About Home Justice Solutions | Experts in Housing Disrepair Claims</title>
+  <meta name="description" content="Learn about Home Justice Solutions, our mission to help tenants enforce their housing disrepair rights, and how we guide you through claims with expert legal support." />
+  <meta name="keywords" content="housing disrepair claims, tenant rights, landlord responsibilities, housing disrepair legal help, housing claims UK, Home Justice Solutions about us" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div style="text-align: center; margin: 15px 0;">
-    <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta" style="margin-left: 10px;">Check If You Qualify</a>
+  <!-- Banner Header -->
+  <div class="banner">
+    <div class="top-bar">
+      <img src="logo.png" alt="Home Justice Solutions Logo" class="logo" />
+      <h1>About Home Justice Solutions: Your Partner in Housing Disrepair Claims</h1>
+    </div>
   </div>
 
-  <nav class="menu-content" id="menuContent" aria-label="Site Navigation Menu">
-    <div class="menu-section">
-      <h4>About Us</h4>
-      <a href="index.html">Home</a>
-      <a href="about-us.html">About Home Justice Solutions</a>
-      <a href="what-we-do.html">What We Do</a>
-      <a href="breathing-space.html">Breathing Space</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
+  <!-- Menu Placeholder -->
+  <div id="menu-placeholder"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu-placeholder").innerHTML = data);
+  </script>
+
+  <main class="container">
+
+    <!-- Section: Who We Are -->
+    <div class="section" aria-labelledby="who-we-are">
+      <h2 id="who-we-are">Who We Are</h2>
+      <p>Home Justice Solutions is a dedicated UK-based organisation specialising in helping tenants assert their housing disrepair rights. We understand the frustration and hardship caused by living in unsafe, unhealthy, or poorly maintained homes. Our experienced team combines legal expertise with compassionate client care to guide tenants through the complex process of making housing disrepair claims.</p>
+      <p>Founded to provide clear, accessible advice and robust support, we have assisted thousands of tenants across England, Scotland, and Wales in obtaining necessary repairs and compensation. We collaborate with specialist solicitors and local authorities to ensure that your landlord is held accountable for failing to maintain your home.</p>
+      <p>Our mission is to empower tenants with knowledge and legal backing, ensuring everyone has the right to safe and habitable housing. We provide no-win-no-fee claims, free eligibility checks, and personalised support every step of the way.</p>
+
+      <a href="contact.html" class="menu-cta" aria-label="Contact Home Justice Solutions">Contact Us Today</a>
     </div>
 
-    <div class="menu-section">
-      <h4>Housing Disrepair Claims</h4>
-      <a href="index.html">Home</a>
-      <a href="how-it-works.html">How It Works</a>
-      <a href="claim-types.html">Claim Types</a>
-      <a href="your-rights.html">Your Rights</a>
-      <a href="your-rights.html">Tenant Rights</a>
-      <a href="search-your-council.html">Find Your Council</a>
-      <a href="faq.html">FAQs</a>
+    <!-- Section: What We Do -->
+    <div class="section" aria-labelledby="what-we-do">
+      <h2 id="what-we-do">What We Do</h2>
+      <p>At Home Justice Solutions, we specialise exclusively in housing disrepair claims. Our dedicated services include:</p>
+      <ul>
+        <li>Free eligibility checks to determine if your housing disrepair qualifies for a claim.</li>
+        <li>Expert guidance on your tenant rights and landlord responsibilities under UK law.</li>
+        <li>Step-by-step assistance in documenting and reporting disrepair issues effectively.</li>
+        <li>Referral to trusted specialist solicitors who manage no-win-no-fee housing disrepair claims.</li>
+        <li>Support liaising with local councils to enforce housing standards and inspections.</li>
+        <li>Help in understanding and navigating compensation claims for inconvenience, health impact, and property damage.</li>
+      </ul>
+      <p>We focus on making the claims process straightforward and stress-free, ensuring tenants can reclaim their rights without legal jargon or unnecessary delays.</p>
+
+      <a href="how-it-works.html" class="menu-cta" aria-label="Learn how Home Justice Solutions works">Learn How It Works</a>
     </div>
 
-    <div class="menu-section">
-      <h4>Start Your Claim</h4>
-      <a href="https://form.jotform.com/250594347028056" target="_blank" rel="noopener noreferrer">Start a Housing Disrepair Claim</a>
+    <!-- Section: Breathing Space Initiative -->
+    <div class="section" aria-labelledby="breathing-space">
+      <h2 id="breathing-space">Supporting Tenants Through the Breathing Space Initiative</h2>
+      <p>We are proud to support the UK government's <strong>Breathing Space</strong> scheme, which offers legal protection for tenants struggling with debt or financial difficulties, including those affected by housing disrepair. This initiative provides a 60-day period where creditors must pause enforcement actions, giving tenants much-needed time to seek help and organise their affairs.</p>
+      <p>Our team advises on how Breathing Space applies to housing disrepair situations, helping you protect your rights while you pursue repairs and compensation. We ensure you fully understand the legal safeguards available during this critical time.</p>
+      <p>By partnering with Breathing Space, we enhance our commitment to supporting vulnerable tenants facing housing and financial hardship.</p>
+
+      <a href="breathing-space.html" class="menu-cta" aria-label="Learn about Breathing Space protections">Learn About Breathing Space</a>
     </div>
 
-    <div class="menu-section">
-      <h4>Contact & Support</h4>
-      <a href="contact.html">Contact Us</a>
-      <a href="testimonials.html">Testimonials</a>
+    <!-- Section: Our Commitment to Privacy -->
+    <div class="section" aria-labelledby="privacy-policy">
+      <h2 id="privacy-policy">Our Privacy Commitment</h2>
+      <p>At Home Justice Solutions, protecting your personal information is paramount. We adhere strictly to UK data protection laws and GDPR guidelines to ensure your data is handled with the utmost care and confidentiality.</p>
+      <p>All information you provide during our free eligibility checks and claims process is securely stored and used solely to assist your housing disrepair claim. We never share your details with third parties without explicit consent, except when necessary for legal proceedings or council enforcement.</p>
+      <p>Your trust is essential to us, and we maintain full transparency about how your data is processed and safeguarded.</p>
+
+      <a href="privacy-policy.html" class="menu-cta" aria-label="Read our Privacy Policy">Read Our Privacy Policy</a>
     </div>
-  </nav>
+
+    <!-- Section: Understanding Housing Disrepair Rights -->
+    <div class="section" aria-labelledby="your-rights">
+      <h2 id="your-rights">Understanding Your Housing Disrepair Rights</h2>
+      <p>Every tenant in the UK has the right to live in a safe and habitable home. Landlords are legally obligated to maintain their properties and carry out repairs promptly. Our role is to educate you about these rights and help you enforce them.</p>
+      <p>Housing disrepair can affect your health, safety, and quality of life. We explain what qualifies as disrepair, your landlord's duties, and the legal framework supporting tenants, including the Landlord and Tenant Act 1985 and the Homes (Fitness for Human Habitation) Act 2018.</p>
+      <p>We guide you through recognising disrepair issues, reporting them correctly, and what to do if your landlord neglects repairs.</p>
+
+      <a href="your-rights.html" class="menu-cta" aria-label="Learn about your housing disrepair rights">Learn More About Your Rights</a>
+    </div>
+
+    <!-- Section: Find Your Council -->
+    <div class="section" aria-labelledby="find-council">
+      <h2 id="find-council">Find Your Local Council for Housing Disrepair Support</h2>
+      <p>Local councils play a crucial role in enforcing housing standards. If your landlord fails to carry out essential repairs, the council’s housing enforcement officers can inspect your property and issue legal notices requiring landlords to act.</p>
+      <p>We help you identify and contact the right council department for your area, ensuring timely inspections and enforcement actions when needed.</p>
+      <p>Understanding your council’s powers can increase pressure on landlords and speed up repair resolutions.</p>
+
+      <a href="search-your-council.html" class="menu-cta" aria-label="Find your local council">Find Your Local Council</a>
+    </div>
+
+    <!-- Section: FAQs About Housing Disrepair -->
+    <div class="section" aria-labelledby="faqs">
+      <h2 id="faqs">Frequently Asked Questions About Housing Disrepair Claims</h2>
+      <p>We know housing disrepair claims can be confusing, so we have compiled answers to the most common questions:</p>
+      <ul>
+        <li><strong>Can I claim compensation if my landlord ignores repairs?</strong> Yes, tenants can pursue claims for inconvenience, distress, and property damage.</li>
+        <li><strong>What evidence do I need?</strong> Detailed photos, communication records, medical reports if applicable, and council inspection documents.</li>
+        <li><strong>How long does a claim take?</strong> Typically 6 months to 2 years, depending on complexity.</li>
+        <li><strong>Will claiming affect my future renting?</strong> No legal negative impact if handled correctly.</li>
+        <li><strong>Can I make a claim if I no longer live there?</strong> Yes, under certain conditions.</li>
+      </ul>
+      <p>For more detailed information, visit our full FAQs page.</p>
+
+      <a href="faq.html" class="menu-cta" aria-label="View full FAQs">View Full FAQs</a>
+    </div>
+
+    <!-- Section: Start Your Housing Disrepair Claim -->
+    <div class="section" aria-labelledby="start-claim">
+      <h2 id="start-claim">Start Your Housing Disrepair Claim Today</h2>
+      <p>When you’re ready to take action, we make it easy to start your housing disrepair claim. Our streamlined no-win-no-fee process ensures you only pay if your claim succeeds.</p>
+      <p>We offer free eligibility checks, expert advice, and ongoing support throughout your claim. Don’t let your landlord’s neglect go unchallenged—claim the repairs and compensation you deserve.</p>
+      <p>Simply fill out our easy online form to begin, and one of our advisors will contact you promptly.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start your housing disrepair claim">Start Your Claim Now</a>
+    </div>
+
+    <!-- Section: Testimonials -->
+    <div class="section" aria-labelledby="testimonials">
+      <h2 id="testimonials">What Our Clients Say</h2>
+      <p>We are proud of the positive impact we’ve made for tenants facing housing disrepair. Here are some of the stories from those we've helped:</p>
+      <blockquote>
+        “Home Justice Solutions made a daunting process simple. They helped me get compensation for years of damp and mould affecting my family’s health.” – Sarah, Manchester
+      </blockquote>
+      <blockquote>
+        “Thanks to their support, my landlord finally fixed the broken heating. The claim was quick and stress-free.” – Mark, Birmingham
+      </blockquote>
+      <p>Read more testimonials and success stories on our dedicated page.</p>
+
+      <a href="testimonials.html" class="menu-cta" aria-label="Read client testimonials">Read More Testimonials</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Home Justice Solutions. We connect tenants with specialist solicitors for housing disrepair claims on a no win, no fee basis.</p>
+  </footer>
 
   <script>
+    // Menu toggle script
     function toggleMenu() {
       const menu = document.getElementById("menuContent");
       if (menu.style.display === "flex") {
         menu.style.display = "none";
       } else {
         menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+        menu.style.alignItems = "center";
       }
     }
-
-    // Optional: close menu if clicking outside
-    window.addEventListener('click', function(e) {
+    window.addEventListener("click", function(e) {
       const menu = document.getElementById("menuContent");
       const btn = document.getElementById("menuButton");
       if (!menu.contains(e.target) && e.target !== btn) {
