@@ -1,26 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Housing Disrepair Claims UK | Home Justice Solutions</title>
-  <meta name="description" content="Expert housing disrepair claims UK service. Get your home repaired & claim compensation easily with our no win no fee solicitors. Start your free claim check now." />
-  <meta name="keywords" content="housing disrepair, home disrepair claims, tenant rights, landlord neglect, housing compensation UK, damp problems, mould remediation, unsafe electrics, faulty heating, structural damage, pest infestations, repair claims, no win no fee solicitors" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+<!-- Header with logo, menu toggle, and CTA -->
+<header class="banner" role="banner">
+  <div class="top-bar" style="display: flex; justify-content: center; align-items: center; gap: 15px; padding: 10px;">
+    <img src="logo.png" alt="Home Justice Solutions Logo" class="logo" />
+    <h1 style="color: #fff; margin: 0; font-weight: bold; font-size: 1.8rem;">Home Justice Solutions</h1>
+    <button class="btn-menu" id="menuButton" aria-label="Toggle navigation menu" style="font-size: 1.5rem; cursor: pointer; background: none; border: none; color: #fff;">
+      ☰ Menu
+    </button>
+    <a href="https://form.jotform.com/250594347028056" class="menu-cta" style="margin-left: 10px;">Check If You Qualify</a>
+  </div>
+</header>
 
-  <!-- Header with logo, menu toggle, and CTA -->
-  <header class="banner" role="banner">
-    <div class="top-bar" style="display: flex; justify-content: center; align-items: center; gap: 15px; padding: 10px;">
-      <img src="logo.png" alt="Home Justice Solutions Logo" class="logo" />
-      <h1 style="color: #fff; margin: 0; font-weight: bold; font-size: 1.8rem;">Home Justice Solutions</h1>
-      <button class="btn-menu" id="menuButton" onclick="toggleMenu()" aria-label="Toggle navigation menu" style="font-size: 1.5rem; cursor: pointer; background: none; border: none; color: #fff;">
-        ☰ Menu
-      </button>
-      <a href="https://form.jotform.com/250594347028056" class="menu-cta" style="margin-left: 10px;">Check If You Qualify</a>
-    </div>
-  </header>
+<!-- Menu Placeholder -->
+<div id="menu-placeholder"></div>
+
+<script>
+  // Load menu.html content into menu-placeholder div
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('menu-placeholder').innerHTML = html;
+
+      // After loading menu.html, add toggle menu functionality
+      const menuButton = document.getElementById('menuButton');
+      const menuContent = document.getElementById('menuContent'); // Assuming your menu.html has this id
+
+      menuButton.addEventListener('click', () => {
+        if (menuContent.style.display === 'flex') {
+          menuContent.style.display = 'none';
+        } else {
+          menuContent.style.display = 'flex';
+          menuContent.style.flexDirection = 'column';
+          menuContent.style.alignItems = 'center';
+        }
+      });
+
+      // Optional: close menu when clicking outside
+      window.addEventListener('click', (e) => {
+        if (!menuContent.contains(e.target) && e.target !== menuButton) {
+          menuContent.style.display = 'none';
+        }
+      });
+    })
+    .catch(err => {
+      console.error('Failed to load menu.html:', err);
+    });
+</script>
+
 
   <main class="container">
 
