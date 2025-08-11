@@ -65,12 +65,19 @@ h1 {
   background: #06b6d4;
   color: #000 !important;
   font-weight: bold;
-  padding: 10px 18px;
   border-radius: 8px;
   text-decoration: none;
   font-size: 16px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transition: background-color 0.3s ease;
+
+  /* Center text vertically and horizontally */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 18px;
+  height: 40px;  /* fixed height for consistent sizing */
 }
 
 .menu-cta:hover {
@@ -149,13 +156,15 @@ h1 {
   margin-top: 0;
 }
 
-/* Footer */
+/* Footer - matching banner color */
 footer {
+  background-color: #7c3aed; /* purple banner color */
+  color: white;
   text-align: center;
-  padding: 20px;
+  padding: 15px 20px;
   font-size: 14px;
-  color: #555;
-  background: #f9f9ff;
+  box-shadow: 0 -2px 5px rgba(124, 58, 237, 0.3);
+  font-weight: 500;
 }
 
 /* Responsive */
@@ -181,5 +190,6 @@ footer {
     font-size: 15px;
     display: block;
     margin: 10px auto;
+    height: auto;      /* override fixed height on mobile for better flexibility */
   }
 }
