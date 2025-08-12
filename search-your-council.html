@@ -83,6 +83,10 @@
       position: relative;
       max-width: 600px;
       margin: 0 auto 40px;
+      background: #f0e6ff;
+      padding: 20px 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,77,64,0.15);
     }
     #councilSearch {
       width: 100%;
@@ -96,23 +100,26 @@
     #councilSearch:focus {
       border-color: #004d40;
       outline: none;
-      box-shadow: 0 0 6px #004d40aa;
+      box-shadow: 0 0 8px #004d40aa;
     }
 
     #councilList {
       position: absolute;
+      top: 110%;
+      left: 0;
       width: 100%;
       max-height: 300px;
       overflow-y: auto;
       background: white;
       border: 1px solid #ddd;
       border-top: none;
-      border-radius: 0 0 10px 10px;
+      border-radius: 0 0 12px 12px;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       z-index: 1000;
       list-style: none;
       margin: 0;
       padding: 0;
+      display: none; /* Hide initially */
     }
     #councilList li {
       padding: 12px 20px;
@@ -167,7 +174,7 @@
     <section class="section search-wrapper" aria-labelledby="search-council-label">
       <h2 id="search-council-label">Search Your Local Council</h2>
       <p>Start typing your council name below to find your local authority responsible for housing disrepair claims. Click your council name to go to the relevant page and begin your claim process.</p>
-      <input type="text" id="councilSearch" placeholder="Start typing your council name..." aria-autocomplete="list" aria-controls="councilList" aria-activedescendant="" role="combobox" aria-expanded="false" aria-haspopup="listbox" />
+      <input type="text" id="councilSearch" placeholder="Start typing your council name..." aria-autocomplete="list" aria-controls="councilList" aria-activedescendant="" role="combobox" aria-expanded="false" aria-haspopup="listbox" autocomplete="off" />
       <ul id="councilList" role="listbox" aria-label="Local councils matching your search"></ul>
       <script>
         (function(){
@@ -355,19 +362,40 @@
             });
           }
 
-          searchInput.addEventListener('input', () => {
+          function updateDropdown() {
             const term = searchInput.value.trim().toLowerCase();
-            renderList(councils.filter(c => c.toLowerCase().includes(term)));
+            if(term.length === 0) {
+              listEl.style.display = 'none';
+              listEl.innerHTML = '';
+            } else {
+              const filtered = councils.filter(c => c.toLowerCase().includes(term));
+              renderList(filtered);
+              listEl.style.display = 'block';
+            }
+          }
+
+          searchInput.addEventListener('input', () => {
+            updateDropdown();
             searchInput.setAttribute('aria-expanded', 'true');
           });
 
-          searchInput.addEventListener('blur', () => {
-            // Close dropdown after small delay to allow click
-            setTimeout(() => listEl.innerHTML = '', 150);
-            searchInput.setAttribute('aria-expanded', 'false');
+          searchInput.addEventListener('focus', () => {
+            if(searchInput.value.trim().length > 0) {
+              updateDropdown();
+              listEl.style.display = 'block';
+              searchInput.setAttribute('aria-expanded', 'true');
+            }
           });
 
-          renderList(councils);
+          searchInput.addEventListener('blur', () => {
+            setTimeout(() => {
+              listEl.style.display = 'none';
+              searchInput.setAttribute('aria-expanded', 'false');
+            }, 200);
+          });
+
+          // Hide dropdown initially
+          listEl.style.display = 'none';
         })();
       </script>
     </section>
@@ -544,27 +572,5 @@
     <p>We are not a firm of solicitors. This website provides information only and does not offer legal advice.</p>
   </footer>
 
-  
-  <script>
-    // Menu toggle script
-    function toggleMenu() {
-      const menu = document.getElementById("menuContent");
-      if (menu.style.display === "flex") {
-        menu.style.display = "none";
-      } else {
-        menu.style.display = "flex";
-        menu.style.flexDirection = "column";
-        menu.style.alignItems = "center";
-      }
-    }
-    window.addEventListener("click", function(e) {
-      const menu = document.getElementById("menuContent");
-      const btn = document.getElementById("menuButton");
-      if (!menu.contains(e.target) && e.target !== btn) {
-        menu.style.display = "none";
-      }
-    });
-  </script>
-  
 </body>
 </html>
