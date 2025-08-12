@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu - Home Justice Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div style="text-align: center; margin: 15px 0;">
+    <button class="btn-menu" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
+    <a href="https://form.jotform.com/250594347028056" class="menu-cta" style="margin-left: 10px;">Check If You Qualify</a>
+  </div>
+
+  <nav class="menu-content" id="menuContent" aria-label="Site Navigation Menu">
+    <div class="menu-section">
+      <h4>About Us</h4>
+      <a href="https://home-justice-solutions.co.uk/index.html">Home</a>
+      <a href="https://home-justice-solutions.co.uk/about-us.html">About Home Justice Solutions</a>
+      <a href="https://home-justice-solutions.co.uk/privacy-policy.html">Privacy Policy</a>
+    </div>
+
+    <div class="menu-section">
+      <h4>Housing Disrepair Claims</h4>
+      <a href="https://home-justice-solutions.co.uk/how-it-works.html">How It Works</a>
+      <a href="https://home-justice-solutions.co.uk/claim-types.html">Claim Types</a>
+      <a href="https://home-justice-solutions.co.uk/search-your-council.html">Your Rights</a>
+      <a href="search-your-council.html">Find Your Council</a>
+      <a href="https://home-justice-solutions.co.uk/faq.html">FAQs</a>
+    </div>
+
+    <div class="menu-section">
+      <h4>Start Your Claim</h4>
+      <a href="https://form.jotform.com/250594347028056" target="_blank" rel="noopener noreferrer">Start a Housing Disrepair Claim</a>
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menuContent");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+
+    // Optional: close menu if clicking outside
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById("menuContent");
+      const btn = document.getElementById("menuButton");
+      if (!menu.contains(e.target) && e.target !== btn) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>
