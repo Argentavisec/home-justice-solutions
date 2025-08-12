@@ -7,6 +7,81 @@
   <meta name="description" content="Find your local council and learn how to report housing disrepair issues such as damp, mould, leaks, and heating failure. Expert guidance on starting your claim and understanding your rights." />
   <meta name="keywords" content="find local council, housing disrepair claim, council housing repairs, damp claims, mould claims, leaking roof claims, broken heating claims, council enforcement housing, tenant rights housing disrepair, how to claim housing disrepair" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Professional Search Box Styling */
+    .search-wrapper {
+      position: relative;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      background: #f0e6ff;
+      padding: 25px 30px 35px;
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(0,77,64,0.2);
+      font-family: Arial, sans-serif;
+    }
+    #councilSearch {
+      width: 100%;
+      padding: 15px 22px;
+      font-size: 1.2rem;
+      border: 2px solid #00796b;
+      border-radius: 35px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+      cursor: text;
+    }
+    #councilSearch:focus {
+      border-color: #004d40;
+      outline: none;
+      box-shadow: 0 0 10px #004d4088;
+    }
+
+    #councilList {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      max-height: 320px;
+      overflow-y: auto;
+      background: white;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 14px 14px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      z-index: 10000;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: none;
+      font-size: 1rem;
+    }
+    #councilList li {
+      padding: 14px 25px;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.2s ease;
+    }
+    #councilList li:last-child {
+      border-bottom: none;
+    }
+    #councilList li:hover, #councilList li:focus {
+      background-color: #00796b;
+      color: white;
+      outline: none;
+    }
+    #councilList li[aria-live="polite"] {
+      cursor: default;
+      color: #777;
+      font-style: italic;
+      background: none !important;
+    }
+
+    /* Improved Menu Styles */
+    #menu-placeholder {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+  </style>
 </head>
 <body>
 
@@ -26,15 +101,26 @@
       .then(data => document.getElementById("menu-placeholder").innerHTML = data);
   </script>
 
-
   <main class="container" role="main" aria-label="Main content">
 
     <!-- Professional Council Search Box -->
     <section class="section search-wrapper" aria-labelledby="search-council-label">
       <h2 id="search-council-label">Search Your Local Council</h2>
       <p>Start typing your council name below to find your local authority responsible for housing disrepair claims. Click your council name to go to the relevant page and begin your claim process.</p>
-      <input type="text" id="councilSearch" placeholder="Start typing your council name..." aria-autocomplete="list" aria-controls="councilList" aria-activedescendant="" role="combobox" aria-expanded="false" aria-haspopup="listbox" autocomplete="off" />
+      <input
+        type="text"
+        id="councilSearch"
+        placeholder="Start typing your council name..."
+        aria-autocomplete="list"
+        aria-controls="councilList"
+        aria-activedescendant=""
+        role="combobox"
+        aria-expanded="false"
+        aria-haspopup="listbox"
+        autocomplete="off"
+      />
       <ul id="councilList" role="listbox" aria-label="Local councils matching your search"></ul>
+
       <script>
         (function(){
           const councils = [
@@ -224,8 +310,9 @@
           function updateDropdown() {
             const term = searchInput.value.trim().toLowerCase();
             if(term.length === 0) {
-              listEl.style.display = 'none';
-              listEl.innerHTML = '';
+              // Show full list on focus/empty search
+              renderList(councils);
+              listEl.style.display = 'block';
             } else {
               const filtered = councils.filter(c => c.toLowerCase().includes(term));
               renderList(filtered);
@@ -233,27 +320,56 @@
             }
           }
 
+          searchInput.addEventListener('focus', () => {
+            updateDropdown();
+            searchInput.setAttribute('aria-expanded', 'true');
+          });
+
           searchInput.addEventListener('input', () => {
             updateDropdown();
             searchInput.setAttribute('aria-expanded', 'true');
           });
 
-          searchInput.addEventListener('focus', () => {
-            if(searchInput.value.trim().length > 0) {
-              updateDropdown();
-              listEl.style.display = 'block';
-              searchInput.setAttribute('aria-expanded', 'true');
+          // Hide dropdown when clicking outside or losing focus (with delay for click)
+          document.addEventListener('click', (event) => {
+            if (!searchInput.contains(event.target) && !listEl.contains(event.target)) {
+              listEl.style.display = 'none';
+              searchInput.setAttribute('aria-expanded', 'false');
             }
           });
 
-          searchInput.addEventListener('blur', () => {
-            setTimeout(() => {
-              listEl.style.display = 'none';
-              searchInput.setAttribute('aria-expanded', 'false');
-            }, 200);
+          searchInput.addEventListener('keydown', (e) => {
+            const options = Array.from(listEl.querySelectorAll('li'));
+            if (!options.length) return;
+
+            let currentIndex = options.findIndex(opt => opt === document.activeElement);
+
+            if(e.key === 'ArrowDown') {
+              e.preventDefault();
+              if(currentIndex < options.length - 1) {
+                options[currentIndex + 1].focus();
+              } else {
+                options[0].focus();
+              }
+            } else if(e.key === 'ArrowUp') {
+              e.preventDefault();
+              if(currentIndex > 0) {
+                options[currentIndex - 1].focus();
+              } else {
+                options[options.length - 1].focus();
+              }
+            }
           });
 
-          // Hide dropdown initially
+          listEl.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape') {
+              searchInput.focus();
+              listEl.style.display = 'none';
+              searchInput.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          // Initially hide dropdown
           listEl.style.display = 'none';
         })();
       </script>
@@ -431,7 +547,6 @@
     <p>We are not a firm of solicitors. This website provides information only and does not offer legal advice.</p>
   </footer>
 
-  
   <script>
     // Menu toggle script
     function toggleMenu() {
