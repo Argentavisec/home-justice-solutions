@@ -6,154 +6,11 @@
   <title>Find Your Local Council | Housing Disrepair Claims | Home Justice Solutions</title>
   <meta name="description" content="Find your local council and learn how to report housing disrepair issues such as damp, mould, leaks, and heating failure. Expert guidance on starting your claim and understanding your rights." />
   <meta name="keywords" content="find local council, housing disrepair claim, council housing repairs, damp claims, mould claims, leaking roof claims, broken heating claims, council enforcement housing, tenant rights housing disrepair, how to claim housing disrepair" />
-  <style>
-    /* Container and general styles */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    .banner {
-      background-color: #004d40;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    .top-bar {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      justify-content: center;
-    }
-    .logo {
-      height: 50px;
-      width: auto;
-    }
-    main.container {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 0 20px 50px;
-      background: white;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      border-radius: 8px;
-    }
-    h1, h2, h3 {
-      color: #004d40;
-    }
-    .section {
-      margin-bottom: 50px;
-    }
-    p {
-      font-size: 1rem;
-      margin-bottom: 1em;
-    }
-    ul {
-      margin-left: 20px;
-      margin-bottom: 1em;
-    }
-    ol {
-      margin-left: 20px;
-      margin-bottom: 1em;
-    }
-    a.menu-cta {
-      display: inline-block;
-      background-color: #00796b;
-      color: white !important;
-      padding: 12px 24px;
-      border-radius: 25px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      margin-top: 10px;
-    }
-    a.menu-cta:hover, a.menu-cta:focus {
-      background-color: #004d40;
-      outline: none;
-    }
-
-    /* Professional search box styling */
-    .search-wrapper {
-      position: relative;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      background: #f0e6ff;
-      padding: 20px 25px 30px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,77,64,0.15);
-    }
-    #councilSearch {
-      width: 100%;
-      padding: 14px 20px;
-      font-size: 1.1rem;
-      border: 2px solid #00796b;
-      border-radius: 30px;
-      box-sizing: border-box;
-      transition: border-color 0.3s ease;
-    }
-    #councilSearch:focus {
-      border-color: #004d40;
-      outline: none;
-      box-shadow: 0 0 8px #004d40aa;
-    }
-
-    #councilList {
-      position: absolute;
-      top: 110%;
-      left: 0;
-      width: 100%;
-      max-height: 300px;
-      overflow-y: auto;
-      background: white;
-      border: 1px solid #ddd;
-      border-top: none;
-      border-radius: 0 0 12px 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      z-index: 1000;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: none; /* Hide initially */
-    }
-    #councilList li {
-      padding: 12px 20px;
-      cursor: pointer;
-      font-size: 1rem;
-      border-bottom: 1px solid #eee;
-      transition: background-color 0.2s ease;
-    }
-    #councilList li:last-child {
-      border-bottom: none;
-    }
-    #councilList li:hover, #councilList li:focus {
-      background-color: #00796b;
-      color: white;
-      outline: none;
-    }
-    #councilList li[aria-live="polite"] {
-      cursor: default;
-      color: #777;
-      font-style: italic;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 25px 20px;
-      background: #f1f1f1;
-      color: #555;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Banner Header -->
   <div class="banner">
     <div class="top-bar">
       <img src="logo.png" alt="Home Justice Solutions Logo" class="logo" />
@@ -161,12 +18,14 @@
     </div>
   </div>
 
+  <!-- Menu Placeholder -->
   <div id="menu-placeholder"></div>
   <script>
     fetch("menu.html")
       .then(res => res.text())
       .then(data => document.getElementById("menu-placeholder").innerHTML = data);
   </script>
+
 
   <main class="container" role="main" aria-label="Main content">
 
@@ -571,6 +430,28 @@
     <p>© 2025 Home Justice Solutions. We connect tenants with specialist solicitors for housing disrepair claims on a no win, no fee basis.</p>
     <p>We are not a firm of solicitors. This website provides information only and does not offer legal advice.</p>
   </footer>
+
+  
+  <script>
+    // Menu toggle script
+    function toggleMenu() {
+      const menu = document.getElementById("menuContent");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+        menu.style.alignItems = "center";
+      }
+    }
+    window.addEventListener("click", function(e) {
+      const menu = document.getElementById("menuContent");
+      const btn = document.getElementById("menuButton");
+      if (!menu.contains(e.target) && e.target !== btn) {
+        menu.style.display = "none";
+      }
+    });
+  </script>
 
 </body>
 </html>
