@@ -2,439 +2,569 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Search Your Council | Home Justice Solutions</title>
-  <meta name="description" content="Search your local council to get free help with housing disrepair claims across the UK.">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Find Your Local Council | Housing Disrepair Claims | Home Justice Solutions</title>
+  <meta name="description" content="Find your local council and learn how to report housing disrepair issues such as damp, mould, leaks, and heating failure. Expert guidance on starting your claim and understanding your rights." />
+  <meta name="keywords" content="find local council, housing disrepair claim, council housing repairs, damp claims, mould claims, leaking roof claims, broken heating claims, council enforcement housing, tenant rights housing disrepair, how to claim housing disrepair" />
   <style>
+    /* Container and general styles */
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: #f9f9ff;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header {
-      background-color: #7c3aed;
-      text-align: center;
-      padding: 20px 10px;
-    }
-    header img {
-      max-height: 80px;
-    }
-    header h1 {
-      color: #fff;
-      margin: 10px 0 0;
-      font-size: 24px;
-    }
-    .menu-toggle {
-      background: #5b21b6;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 10px 5px;
-    }
-    .menu-cta {
-      display: inline-block;
-      background-color: #06b6d4;
-      color: black;
-      padding: 10px 18px;
-      font-weight: bold;
-      font-size: 16px;
-      border-radius: 8px;
-      text-align: center;
-      text-decoration: none;
-      margin: 10px 5px;
-      max-width: 250px;
-      word-wrap: break-word;
-    }
-    .menu-content {
-      display: none;
-      background: #ede4ff;
-      text-align: center;
-      padding: 20px;
-    }
-    .menu-content a {
-      display: block;
-      padding: 10px;
-      text-decoration: none;
-      color: #222;
-      font-weight: bold;
-    }
-    .menu-content a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    input[type="text"] {
-      width: 100%;
-      max-width: 500px;
-      display: block;
-      margin: 10px auto;
-      padding: 14px 16px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    ul#councilList {
-      list-style: none;
+      line-height: 1.6;
+      margin: 0;
       padding: 0;
-      margin-top: 20px;
-      max-height: 400px;
-      overflow-y: auto;
+      background: #f9f9f9;
+      color: #333;
     }
-    ul#councilList li {
-      padding: 12px 15px;
-      border-bottom: 1px solid #ddd;
-      cursor: pointer;
-      background: #fff;
-      transition: background 0.2s;
-      border-radius: 4px;
-      margin-bottom: 4px;
-    }
-    ul#councilList li:hover {
-      background: #f0f0f0;
-    }
-    footer {
-      background: #ffffff;
-      color: #5b32c7;
+    .banner {
+      background-color: #004d40;
+      color: white;
+      padding: 20px 0;
       text-align: center;
-      padding: 15px;
-      font-size: 14px;
-      margin-top: auto;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .top-bar {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      justify-content: center;
+    }
+    .logo {
+      height: 50px;
+      width: auto;
+    }
+    main.container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px 50px;
+      background: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h1, h2, h3 {
+      color: #004d40;
     }
     .section {
-  background: #ede4ff;
-  padding: 20px;
-  border-radius: 12px;
-  margin: 20px 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-}
-.section h2 {
-  color: #5b21b6;
-  font-size: 22px;
-  margin-top: 0;
-}
-.section p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 15px;
-}
-.section a.menu-cta {
-  display: inline-block;
-  background-color: #06b6d4;
-  color: #000;
-  padding: 12px 20px;
-  font-weight: bold;
-  font-size: 16px;
-  border-radius: 8px;
-  text-decoration: none;
-  margin-top: 10px;
-}
-.section a.menu-cta:hover {
-  background-color: #0891b2;
-}
+      margin-bottom: 50px;
+    }
+    p {
+      font-size: 1rem;
+      margin-bottom: 1em;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 1em;
+    }
+    ol {
+      margin-left: 20px;
+      margin-bottom: 1em;
+    }
+    a.menu-cta {
+      display: inline-block;
+      background-color: #00796b;
+      color: white !important;
+      padding: 12px 24px;
+      border-radius: 25px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    a.menu-cta:hover, a.menu-cta:focus {
+      background-color: #004d40;
+      outline: none;
+    }
 
-    @media (max-width: 600px) {
-      .menu-toggle,
-      .menu-cta {
-        width: 90%;
-        max-width: 90%;
-        padding: 12px;
-        font-size: 15px;
-      }
-      input[type="text"] {
-        width: 95%;
-        font-size: 15px;
-      }
-      header h1 {
-        font-size: 20px;
-      }
+    /* Professional search box styling */
+    .search-wrapper {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    #councilSearch {
+      width: 100%;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      border: 2px solid #00796b;
+      border-radius: 30px;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+    }
+    #councilSearch:focus {
+      border-color: #004d40;
+      outline: none;
+      box-shadow: 0 0 6px #004d40aa;
+    }
+
+    #councilList {
+      position: absolute;
+      width: 100%;
+      max-height: 300px;
+      overflow-y: auto;
+      background: white;
+      border: 1px solid #ddd;
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    #councilList li {
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.2s ease;
+    }
+    #councilList li:last-child {
+      border-bottom: none;
+    }
+    #councilList li:hover, #councilList li:focus {
+      background-color: #00796b;
+      color: white;
+      outline: none;
+    }
+    #councilList li[aria-live="polite"] {
+      cursor: default;
+      color: #777;
+      font-style: italic;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 25px 20px;
+      background: #f1f1f1;
+      color: #555;
+      margin-top: 40px;
     }
   </style>
+</head>
+<body>
+
+  <div class="banner">
+    <div class="top-bar">
+      <img src="logo.png" alt="Home Justice Solutions Logo" class="logo" />
+      <h1>Find Your Local Council to Start Your Housing Disrepair Claim</h1>
+    </div>
+  </div>
+
+  <div id="menu-placeholder"></div>
   <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu-placeholder").innerHTML = data);
+  </script>
+
+  <main class="container" role="main" aria-label="Main content">
+
+    <!-- Professional Council Search Box -->
+    <section class="section search-wrapper" aria-labelledby="search-council-label">
+      <h2 id="search-council-label">Search Your Local Council</h2>
+      <p>Start typing your council name below to find your local authority responsible for housing disrepair claims. Click your council name to go to the relevant page and begin your claim process.</p>
+      <input type="text" id="councilSearch" placeholder="Start typing your council name..." aria-autocomplete="list" aria-controls="councilList" aria-activedescendant="" role="combobox" aria-expanded="false" aria-haspopup="listbox" />
+      <ul id="councilList" role="listbox" aria-label="Local councils matching your search"></ul>
+      <script>
+        (function(){
+          const councils = [
+            "Aberdeen City Council","Aberdeenshire Council","Adur District Council","Allerdale Borough Council",
+            "Amber Valley Borough Council","Angus Council",
+            "Antrim and Newtownabbey Borough Council","Ards and North Down Borough Council",
+            "Argyll and Bute Council","Armagh City, Banbridge and Craigavon Borough Council",
+            "Ashfield District Council","Ashford Borough Council",
+            "Aylesbury Vale District Council","Babergh District Council","Barking and Dagenham Council",
+            "Barnet Council","Barnsley Metropolitan Borough Council","Barrow-in-Furness Borough Council",
+            "Basildon Borough Council","Basingstoke and Deane Borough Council","Bassetlaw District Council",
+            "Bath and North East Somerset Council","Bedford Borough Council","Belfast City Council",
+            "Bexley Council","Birmingham City Council","Blaby District Council",
+            "Blackburn with Darwen Borough Council","Blackpool Council",
+            "Blaenau Gwent County Borough Council","Bolsover District Council",
+            "Bolton Metropolitan Borough Council","Boston Borough Council",
+            "Bournemouth Christchurch and Poole Council","Bracknell Forest Council",
+            "Bradford Metropolitan District Council","Braintree District Council",
+            "Breckland District Council","Brent Council","Brentwood Borough Council",
+            "Bridgend County Borough Council","Brighton & Hove City Council",
+            "Bristol City Council","Broadland District Council","Bromley Council",
+            "Bromsgrove District Council","Broxbourne Borough Council",
+            "Broxtowe Borough Council","Buckinghamshire Council","Burnley Borough Council",
+            "Bury Council","Caerphilly County Borough Council","Calderdale Metropolitan Borough Council",
+            "Cambridge City Council","Camden Council","Cannock Chase District Council",
+            "Canterbury City Council","Cardiff Council","Carlisle City Council",
+            "Carmarthenshire County Council","Castle Point Borough Council",
+            "Causeway Coast and Glens Borough Council","Central Bedfordshire Council",
+            "Ceredigion County Council","Charnwood Borough Council",
+            "Chelmsford City Council","Cheltenham Borough Council","Cherwell District Council",
+            "Cheshire East Council","Cheshire West and Chester Council",
+            "Chesterfield Borough Council","Chichester District Council",
+            "Chiltern District Council","Chorley Borough Council","City of Edinburgh Council",
+            "City of London Corporation","Clackmannanshire Council",
+            "Colchester City Council","Conwy County Borough Council",
+            "Cookstown District Council","Copeland Borough Council",
+            "Corby Borough Council","Cornwall Council","Cotswold District Council",
+            "Coventry City Council","Craigavon Borough Council","Croydon Council",
+            "Cumbria County Council","Darlington Borough Council",
+            "Dartford Borough Council","Daventry District Council",
+            "Denbighshire County Council","Derby City Council","Derbyshire County Council",
+            "Derbyshire Dales District Council","Derry City and Strabane Borough Council",
+            "Dorset Council","Down District Council",
+            "Dudley Metropolitan Borough Council","Dumfries and Galloway Council",
+            "Dundee City Council","Dungannon and South Tyrone Borough Council",
+            "Durham County Council","Ealing Council","East Ayrshire Council",
+            "East Cambridgeshire District Council","East Devon District Council",
+            "East Dorset District Council","East Dunbartonshire Council",
+            "East Hampshire District Council","East Hertfordshire District Council",
+            "East Lindsey District Council","East Lothian Council",
+            "East Northamptonshire Council","East Renfrewshire Council",
+            "East Riding of Yorkshire Council","East Staffordshire Borough Council",
+            "East Suffolk Council","East Sussex County Council","Eastbourne Borough Council",
+            "Eastleigh Borough Council","Eden District Council","Edinburgh City Council",
+            "Elmbridge Borough Council","Enfield Council","Epping Forest District Council",
+            "Epsom and Ewell Borough Council","Erewash Borough Council",
+            "Exeter City Council","Falkirk Council","Fareham Borough Council",
+            "Fenland District Council","Fermanagh and Omagh District Council","Fife Council",
+            "Flintshire County Council","Folkestone and Hythe District Council",
+            "Forest of Dean District Council","Forth Valley Council","Foyle District Council",
+            "Fylde Borough Council","Gateshead Metropolitan Borough Council",
+            "Gedling Borough Council","Glasgow City Council","Glenavy and Crumlin District Council",
+            "Gloucester City Council","Gosport Borough Council",
+            "Gravesham Borough Council","Great Yarmouth Borough Council",
+            "Greenwich Council","Guildford Borough Council","Gwynedd Council",
+            "Hackney Council","Halton Borough Council","Hambleton District Council",
+            "Hammersmith and Fulham Council","Haringey Council","Harrow Council",
+            "Hart District Council","Hartlepool Borough Council","Hastings Borough Council",
+            "Havering Council","Hertfordshire County Council","High Peak Borough Council",
+            "Highland Council","Hillingdon Council",
+            "Hinckley and Bosworth Borough Council","Horsham District Council",
+            "Hounslow Council","Hull City Council",
+            "Inverclyde Council","Ipswich Borough Council",
+            "Isle of Anglesey County Council","Isle of Wight Council",
+            "Isles of Scilly Council","Islington Council",
+            "Kensington and Chelsea Council","Kettering Borough Council",
+            "King's Lynn and West Norfolk Council","Kingston upon Hull City Council",
+            "Kingston upon Thames Council","Kirklees Council",
+            "Knowsley Metropolitan Borough Council","Lambeth Council",
+            "Lancaster City Council","Leeds City Council",
+            "Leicester City Council","Leicestershire County Council",
+            "Lewes District Council","Lewisham Council",
+            "Lincoln City Council","Lisburn and Castlereagh Council",
+            "Liverpool City Council","Luton Borough Council",
+            "Manchester City Council","Mansfield District Council",
+            "Medway Council","Merton Council","Mid Devon District Council",
+            "Mid Suffolk District Council","Milton Keynes City Council",
+            "Monmouthshire County Borough Council","Moray Council",
+            "Newcastle City Council","New Forest District Council",
+            "Newark and Sherwood District Council",
+            "Newry Mourne and Down District Council",
+            "Newtownabbey Borough Council","Norfolk County Council",
+            "North Ayrshire Council","North East Lincolnshire Council",
+            "North Lanarkshire Council","North Lincolnshire Council",
+            "North Somerset Council","North Tyneside Council",
+            "Northumberland County Council","North Warwickshire Borough Council",
+            "North Yorkshire Council","Nottingham City Council",
+            "Nuneaton and Bedworth Borough Council",
+            "Oadby and Wigston Borough Council","Oldham Council",
+            "Orkney Islands Council","Oxford City Council",
+            "Pembrokeshire County Council","Perth and Kinross Council",
+            "Peterborough City Council","Plymouth City Council",
+            "Poole Borough Council","Portsmouth City Council",
+            "Powys County Council","Reading Borough Council",
+            "Redbridge Council","Redcar and Cleveland Borough Council",
+            "Redditch Borough Council","Renfrewshire Council",
+            "Richmondshire District Council","Richmond upon Thames Council",
+            "Rochdale Borough Council","Rotherham Metropolitan Borough Council",
+            "Royal Borough of Greenwich","Royal Borough of Kingston upon Thames",
+            "Royal Borough of Kensington and Chelsea",
+            "Royal Borough of Windsor and Maidenhead","Rugby Borough Council",
+            "Ryedale District Council","Salford City Council",
+            "Sandwell Metropolitan Borough Council","Scarborough Borough Council",
+            "Scottish Borders Council","Sefton Council","Selby District Council",
+            "Sheffield City Council","Shropshire Council","Slough Borough Council",
+            "Solihull Metropolitan Borough Council","Somerset Council",
+            "South Ayrshire Council","South Bucks District Council",
+            "South Cambridgeshire District Council","South Derbyshire District Council",
+            "South Gloucestershire Council","South Hams District Council",
+            "South Holland District Council","South Lanarkshire Council",
+            "South Northamptonshire Council","South Oxfordshire District Council",
+            "South Ribble Borough Council","South Somerset District Council",
+            "South Tyneside Council","Southend-on-Sea City Council",
+            "Spelthorne Borough Council","St. Albans City & District Council",
+            "Stafford Borough Council","Staffordshire County Council",
+            "Stirling Council","Stockport Metropolitan Borough Council",
+            "Stoke-on-Trent City Council","Strabane District Council",
+            "Stratford-on-Avon District Council","Stroud District Council",
+            "Sunderland City Council","Surrey County Council","Sutton Council",
+            "Swale Borough Council","Swansea Council",
+            "Swindon Borough Council","Tameside Metropolitan Borough Council",
+            "Tamworth Borough Council","Telford and Wrekin Council",
+            "Thanet District Council","Three Rivers District Council","Torbay Council",
+            "Torfaen County Borough Council","Tower Hamlets Council",
+            "Trafford Council","Tyrone District Council",
+            "Vale of Glamorgan Council","Wakefield Council",
+            "Walsall Metropolitan Borough Council","Waltham Forest Council",
+            "Wandsworth Council","Warwick District Council","Watford Borough Council",
+            "Wealden District Council","Wellingborough Borough Council",
+            "West Berkshire Council","West Devon Borough Council",
+            "West Dunbartonshire Council","West Lancashire Council",
+            "West Lothian Council","West Oxfordshire District Council",
+            "West Somerset Council","West Suffolk Council",
+            "Westminster City Council","Wigan Council",
+            "Wiltshire Council","Windsor and Maidenhead",
+            "Wirral Council","Wokingham Borough Council",
+            "Wolverhampton City Council","Worcestershire County Council",
+            "Wrexham County Borough Council","York City Council"
+          ];
+
+          const listEl = document.getElementById('councilList');
+          const searchInput = document.getElementById('councilSearch');
+
+          function slugify(name) {
+            return name.toLowerCase()
+              .replace(/ & /g, '-and-')
+              .replace(/[\s,'’]+/g, '-')
+              .replace(/[^\w-]/g, '');
+          }
+
+          function renderList(items) {
+            listEl.innerHTML = '';
+            if(items.length === 0) {
+              const noResultLi = document.createElement('li');
+              noResultLi.textContent = 'No councils found. Please try another search.';
+              noResultLi.setAttribute('aria-live', 'polite');
+              listEl.appendChild(noResultLi);
+              return;
+            }
+            items.forEach(name => {
+              const li = document.createElement('li');
+              li.textContent = name;
+              li.tabIndex = 0;
+              li.setAttribute('role', 'option');
+              li.onclick = () => {
+                window.location.href = 'councils/' + slugify(name) + '.html';
+              };
+              li.onkeypress = (e) => {
+                if(e.key === 'Enter' || e.key === ' ') {
+                  li.click();
+                }
+              };
+              listEl.appendChild(li);
+            });
+          }
+
+          searchInput.addEventListener('input', () => {
+            const term = searchInput.value.trim().toLowerCase();
+            renderList(councils.filter(c => c.toLowerCase().includes(term)));
+            searchInput.setAttribute('aria-expanded', 'true');
+          });
+
+          searchInput.addEventListener('blur', () => {
+            // Close dropdown after small delay to allow click
+            setTimeout(() => listEl.innerHTML = '', 150);
+            searchInput.setAttribute('aria-expanded', 'false');
+          });
+
+          renderList(councils);
+        })();
+      </script>
+    </section>
+
+    <!-- Expanded SEO Content Sections -->
+
+    <section class="section" aria-labelledby="why-know-council">
+      <h2 id="why-know-council">Why Knowing Your Local Council is Crucial for Housing Disrepair Claims</h2>
+      <p>Your local council is the frontline authority responsible for ensuring that rental properties, especially social housing, meet health and safety standards. When faced with housing disrepair such as damp, mould, leaking roofs, broken heating, or electrical hazards, knowing the exact council responsible for your area is essential for:</p>
+      <ul>
+        <li>Promptly reporting disrepair issues to the correct authority</li>
+        <li>Accessing tailored local advice and housing enforcement services</li>
+        <li>Ensuring your complaint reaches the team that can take action</li>
+        <li>Receiving timely inspections, improvement notices, and repairs</li>
+        <li>Strengthening your legal claim with official council involvement</li>
+      </ul>
+      <p>Each council operates with its own housing department policies, budgets, and enforcement priorities. Some councils may offer additional tenant support services, grants for repairs, or fast-track inspections for vulnerable residents. Accurate identification of your local council streamlines your claim process and improves the likelihood of a positive outcome.</p>
+      <p>Moreover, if you rent privately, councils still have powers to enforce repairs where landlords neglect their legal obligations under housing law, so your council remains a key contact point.</p>
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start Your Housing Disrepair Claim">Start Your Housing Disrepair Claim</a>
+    </section>
+
+    <section class="section" aria-labelledby="understanding-council-housing-responsibilities">
+      <h2 id="understanding-council-housing-responsibilities">Understanding Your Local Council’s Housing Repair Responsibilities</h2>
+      <p>Local councils are bound by UK housing legislation to ensure that rental properties meet minimum health and safety standards. Their key responsibilities typically include:</p>
+      <ul>
+        <li>Inspecting complaints about housing disrepair and hazards</li>
+        <li>Issuing formal enforcement notices such as Improvement Notices or Hazard Awareness Notices</li>
+        <li>Taking legal action against landlords who fail to comply</li>
+        <li>Monitoring housing conditions to prevent unsafe or uninhabitable homes</li>
+        <li>Providing advice and support for tenants on housing issues</li>
+      </ul>
+      <p>When your landlord is the council itself (in social housing cases), the council acts as both landlord and regulator, increasing the importance of reporting disrepair directly and accurately.</p>
+      <p>Knowing these responsibilities helps you understand the scope of what your council can do to assist and enforce repairs.</p>
+      <a href="your-rights.html" class="menu-cta" aria-label="Learn About Your Tenant Rights">Learn About Your Tenant Rights</a>
+    </section>
+
+    <section class="section" aria-labelledby="how-to-report-disrepair">
+      <h2 id="how-to-report-disrepair">How to Report Housing Disrepair to Your Local Council</h2>
+      <p>Reporting housing disrepair correctly is key to triggering inspections, enforcement, and repairs. After identifying your council using the search box above, use the following best practices when submitting a complaint:</p>
+      <ul>
+        <li><strong>Report promptly:</strong> As soon as you notice problems such as damp, leaks, or heating failure</li>
+        <li><strong>Provide detailed descriptions:</strong> Clearly describe the problem’s nature, location, and severity</li>
+        <li><strong>Include supporting evidence:</strong> Attach clear, dated photographs or videos documenting the disrepair</li>
+        <li><strong>Mention health impacts:</strong> If anyone’s health has been affected, provide medical details where possible</li>
+        <li><strong>Request urgent attention:</strong> For serious hazards like electrical faults or structural issues</li>
+        <li><strong>Keep records:</strong> Save copies of all communications and responses from your council</li>
+      </ul>
+      <p>Most councils offer multiple reporting channels including online forms, phone hotlines, email, or in-person visits. Your council’s website will provide these details. Timely, clear reporting increases the chances your complaint will be prioritized and addressed efficiently.</p>
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Help Reporting Disrepair">Get Help Reporting Disrepair</a>
+    </section>
+
+    <section class="section" aria-labelledby="your-legal-rights">
+      <h2 id="your-legal-rights">Your Legal Rights When Reporting Housing Disrepair</h2>
+      <p>Under UK law, tenants have the right to safe, healthy, and well-maintained homes. The main legal frameworks protecting tenants include:</p>
+      <ul>
+        <li><strong>Landlord and Tenant Act 1985:</strong> Requires landlords to keep the structure and installations of rented homes in good repair</li>
+        <li><strong>Homes (Fitness for Human Habitation) Act 2018:</strong> Ensures homes are safe and suitable for living throughout the tenancy</li>
+        <li><strong>Housing Health and Safety Rating System (HHSRS):</strong> Councils use this to assess and act on hazards</li>
+      </ul>
+      <p>If your landlord or council fails to maintain your home, you have the right to:</p>
+      <ul>
+        <li>Request repairs formally and in writing</li>
+        <li>Report the issue to your local council for enforcement</li>
+        <li>Seek compensation for health impacts, damage, and distress</li>
+        <li>Take legal action if necessary to enforce repairs and compensation</li>
+      </ul>
+      <p>Understanding your rights empowers you to hold landlords and councils accountable for their legal duties.</p>
+      <a href="your-rights.html" class="menu-cta" aria-label="Learn About Your Tenant Rights">Learn About Your Tenant Rights</a>
+    </section>
+
+    <section class="section" aria-labelledby="health-impacts">
+      <h2 id="health-impacts">How Housing Disrepair Affects Your Health and Wellbeing</h2>
+      <p>Living in homes with unresolved disrepair such as damp, mould, or faulty heating can have significant negative effects on physical and mental health:</p>
+      <ul>
+        <li><strong>Respiratory problems:</strong> Damp and mould can trigger asthma, bronchitis, and other breathing issues</li>
+        <li><strong>Allergies and skin irritations:</strong> Exposure to mould spores may cause rashes and allergic reactions</li>
+        <li><strong>Stress and anxiety:</strong> Persistent housing problems can cause chronic stress and anxiety disorders</li>
+        <li><strong>Increased risk of accidents:</strong> Structural damage or faulty electrics can lead to injury</li>
+      </ul>
+      <p>Recognising these health risks supports your claim and highlights the urgency of obtaining repairs. You may wish to obtain medical reports linking symptoms to your housing conditions.</p>
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Help With Health-Related Claims">Get Help With Health-Related Claims</a>
+    </section>
+
+    <section class="section" aria-labelledby="evidence-for-claim">
+      <h2 id="evidence-for-claim">Gathering Evidence to Support Your Housing Disrepair Claim</h2>
+      <p>Strong, well-organised evidence is crucial to the success of your housing disrepair claim. Essential evidence includes:</p>
+      <ul>
+        <li><strong>Photographs and videos:</strong> Clear, dated images documenting all disrepair areas and hazards</li>
+        <li><strong>Written communication:</strong> Copies of letters, emails, and texts to your landlord or council requesting repairs</li>
+        <li><strong>Medical reports:</strong> Professional documentation linking health issues to disrepair conditions</li>
+        <li><strong>Expert surveyor reports:</strong> Independent assessments of property condition and landlord responsibility</li>
+        <li><strong>Receipts and invoices:</strong> Proof of expenses for alternative accommodation or repairs you organised</li>
+        <li><strong>Witness statements:</strong> Testimonies from neighbours, family, or healthcare providers about your living conditions</li>
+      </ul>
+      <p>Organising your evidence clearly and keeping multiple copies will strengthen your claim and speed up the process.</p>
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Check Your Eligibility for Disrepair Claim">Check Your Eligibility</a>
+    </section>
+
+    <section class="section" aria-labelledby="claim-process">
+      <h2 id="claim-process">The Step-by-Step Housing Disrepair Claim Process</h2>
+      <p>Understanding the housing disrepair claim process helps you prepare and act confidently. Here’s the typical progression:</p>
+      <ol>
+        <li><strong>Report disrepair to your landlord or council:</strong> Provide clear details and evidence</li>
+        <li><strong>Allow reasonable time for repairs:</strong> Landlords usually get 14-28 days depending on urgency</li>
+        <li><strong>Contact your local council:</strong> If repairs are ignored, request an inspection and enforcement</li>
+        <li><strong>Seek legal advice:</strong> A specialist solicitor can assess your claim’s strength and guide next steps</li>
+        <li><strong>Submit formal claim:</strong> Your solicitor sends a Letter of Claim demanding repairs and/or compensation</li>
+        <li><strong>Negotiations or Alternative Dispute Resolution:</strong> Attempt settlement without court</li>
+        <li><strong>Court proceedings:</strong> If no settlement, claim proceeds to court hearing</li>
+        <li><strong>Judgment and compensation:</strong> Court orders landlord to repair and pay damages</li>
+      </ol>
+      <p>Acting early, keeping detailed records, and obtaining expert support improve your chances of success.</p>
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Start Your Claim Now">Start Your Claim Now</a>
+    </section>
+
+    <section class="section" aria-labelledby="common-challenges">
+      <h2 id="common-challenges">Common Challenges When Dealing With Housing Disrepair Claims</h2>
+      <p>Many tenants face obstacles including:</p>
+      <ul>
+        <li><strong>Landlord denial or delay:</strong> Some landlords deny responsibility or avoid repairs</li>
+        <li><strong>Difficulty gathering evidence:</strong> Poor documentation weakens claims</li>
+        <li><strong>Fear of retaliation:</strong> Worry about eviction or harassment after complaints</li>
+        <li><strong>Lengthy claim processes:</strong> Delays and stress during claim resolution</li>
+      </ul>
+      <p>Solutions include documenting everything in writing, reporting promptly to councils, seeking legal help early, and knowing your rights to protection from retaliatory actions.</p>
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Get Support Overcoming Challenges">Get Support Overcoming Challenges</a>
+    </section>
+
+    <section class="section" aria-labelledby="tenant-responsibilities">
+      <h2 id="tenant-responsibilities">Tenant Responsibilities When Managing Housing Disrepair</h2>
+      <p>To maximise your claim’s success, tenants should:</p>
+      <ul>
+        <li>Report issues as soon as possible to landlords or councils</li>
+        <li>Provide access for inspections and repairs</li>
+        <li>Keep written records of all communications and evidence</li>
+        <li>Maintain the property reasonably and avoid causing damage</li>
+      </ul>
+      <p>Meeting these responsibilities shows good faith and strengthens your legal position.</p>
+      <a href="your-rights.html" class="menu-cta" aria-label="Learn About Your Tenant Rights">Learn About Your Tenant Rights</a>
+    </section>
+
+    <section class="section" aria-labelledby="faq-section">
+      <h2 id="faq-section">Frequently Asked Questions About Local Councils and Housing Disrepair</h2>
+
+      <h3>Why do I need to find my local council for a housing disrepair claim?</h3>
+      <p>Your council is the regulatory authority responsible for housing standards in your area. Reporting disrepair to them triggers inspections and enforcement actions that can lead to repairs and support your legal claim.</p>
+
+      <h3>Can I report disrepair if I rent privately?</h3>
+      <p>Yes. Councils have enforcement powers over private landlords to ensure homes meet safety and repair standards.</p>
+
+      <h3>What happens if my council ignores my disrepair report?</h3>
+      <p>If the council fails to act, you can escalate by seeking legal advice and potentially making a formal housing disrepair claim through the courts.</p>
+
+      <h3>Do I have to pay upfront for a housing disrepair claim?</h3>
+      <p>No. Most claims operate on a no win, no fee basis, so you only pay if your claim is successful.</p>
+
+      <h3>How long do housing disrepair claims take?</h3>
+      <p>Claims typically take several months to a year, depending on complexity and cooperation from landlords or councils.</p>
+
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Ask Your Questions">Ask Your Questions</a>
+    </section>
+
+    <section class="section" aria-labelledby="contact-experts">
+      <h2 id="contact-experts">Contact Home Justice Solutions for Expert Help With Your Housing Disrepair Claim</h2>
+      <p>Our experienced team offers free eligibility assessments and connects you with specialist solicitors working on a no win, no fee basis. Whether your home suffers from damp, mould, leaks, or faulty heating, we provide clear advice and ongoing support throughout your claim.</p>
+      <p>Don’t wait for conditions to worsen—contact us today and take the first step towards a safer home and rightful compensation.</p>
+      <a href="https://form.jotform.com/250594347028056" class="menu-cta" aria-label="Contact Home Justice Solutions">Contact Us Today for a Free Consultation</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Home Justice Solutions. We connect tenants with specialist solicitors for housing disrepair claims on a no win, no fee basis.</p>
+    <p>We are not a firm of solicitors. This website provides information only and does not offer legal advice.</p>
+  </footer>
+
+  
+  <script>
+    // Menu toggle script
     function toggleMenu() {
       const menu = document.getElementById("menuContent");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+        menu.style.alignItems = "center";
+      }
     }
-    window.addEventListener("click", function (e) {
+    window.addEventListener("click", function(e) {
       const menu = document.getElementById("menuContent");
       const btn = document.getElementById("menuButton");
       if (!menu.contains(e.target) && e.target !== btn) {
         menu.style.display = "none";
       }
     });
-    function filterCouncils() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const items = document.querySelectorAll("#councilList li");
-      items.forEach(li => {
-        li.style.display = li.textContent.toLowerCase().includes(input) ? "block" : "none";
-      });
-    }
   </script>
-</head>
-<body>
-
-  <header>
-    <img src="logo.png" alt="Home Justice Solutions Logo" />
-    <h1>Home Justice Solutions</h1>
-    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">☰ Menu</button>
-    <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If You Qualify</a>
-  </header>
-
-  <div class="menu-content" id="menuContent">
-    <a href="index.html">Home</a>
-    <a href="about-us.html">About Us</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="claim-types.html">Claim Types</a>
-    <a href="tenant-rights.html">Your Rights</a>
-    <a href="faq.html">FAQs</a>
-    <a href="search-your-council.html">Find Your Council</a>
-    <a href="privacy-policy.html">Privacy Policy</a>
-    <a href="https://form.jotform.com/250594347028056">Start a Claim</a>
-  </div>
-
-  <div class="container">
-    <div class="section">
-      <h1>Search Your Local Council</h1>
-      <p>Start typing below to find your local council. Click your council to begin your housing disrepair claim.</p>
-      <input type="text" id="councilSearch" placeholder="Start typing your council name..." onkeyup="filterCouncils()">
-      <ul id="councilList"></ul>
-<script>
-  const councils = [
-    "Aberdeen City Council","Aberdeenshire Council","Adur District Council","Allerdale Borough Council",
-    "Amber Valley Borough Council","Angus Council",
-    "Antrim and Newtownabbey Borough Council","Ards and North Down Borough Council",
-    "Argyll and Bute Council","Armagh City, Banbridge and Craigavon Borough Council",
-    "Ashfield District Council","Ashford Borough Council",
-    "Aylesbury Vale District Council","Babergh District Council","Barking and Dagenham Council",
-    "Barnet Council","Barnsley Metropolitan Borough Council","Barrow-in-Furness Borough Council",
-    "Basildon Borough Council","Basingstoke and Deane Borough Council","Bassetlaw District Council",
-    "Bath and North East Somerset Council","Bedford Borough Council","Belfast City Council",
-    "Bexley Council","Birmingham City Council","Blaby District Council",
-    "Blackburn with Darwen Borough Council","Blackpool Council",
-    "Blaenau Gwent County Borough Council","Bolsover District Council",
-    "Bolton Metropolitan Borough Council","Boston Borough Council",
-    "Bournemouth Christchurch and Poole Council","Bracknell Forest Council",
-    "Bradford Metropolitan District Council","Braintree District Council",
-    "Breckland District Council","Brent Council","Brentwood Borough Council",
-    "Bridgend County Borough Council","Brighton & Hove City Council",
-    "Bristol City Council","Broadland District Council","Bromley Council",
-    "Bromsgrove District Council","Broxbourne Borough Council",
-    "Broxtowe Borough Council","Buckinghamshire Council","Burnley Borough Council",
-    "Bury Council","Caerphilly County Borough Council","Calderdale Metropolitan Borough Council",
-    "Cambridge City Council","Camden Council","Cannock Chase District Council",
-    "Canterbury City Council","Cardiff Council","Carlisle City Council",
-    "Carmarthenshire County Council","Castle Point Borough Council",
-    "Causeway Coast and Glens Borough Council","Central Bedfordshire Council",
-    "Ceredigion County Council","Charnwood Borough Council",
-    "Chelmsford City Council","Cheltenham Borough Council","Cherwell District Council",
-    "Cheshire East Council","Cheshire West and Chester Council",
-    "Chesterfield Borough Council","Chichester District Council",
-    "Chiltern District Council","Chorley Borough Council","City of Edinburgh Council",
-    "City of London Corporation","Clackmannanshire Council",
-    "Colchester City Council","Conwy County Borough Council",
-    "Cookstown District Council","Copeland Borough Council",
-    "Corby Borough Council","Cornwall Council","Cotswold District Council",
-    "Coventry City Council","Craigavon Borough Council","Croydon Council",
-    "Cumbria County Council","Darlington Borough Council",
-    "Dartford Borough Council","Daventry District Council",
-    "Denbighshire County Council","Derby City Council","Derbyshire County Council",
-    "Derbyshire Dales District Council","Derry City and Strabane Borough Council",
-    "Dorset Council","Down District Council",
-    "Dudley Metropolitan Borough Council","Dumfries and Galloway Council",
-    "Dundee City Council","Dungannon and South Tyrone Borough Council",
-    "Durham County Council","Ealing Council","East Ayrshire Council",
-    "East Cambridgeshire District Council","East Devon District Council",
-    "East Dorset District Council","East Dunbartonshire Council",
-    "East Hampshire District Council","East Hertfordshire District Council",
-    "East Lindsey District Council","East Lothian Council",
-    "East Northamptonshire Council","East Renfrewshire Council",
-    "East Riding of Yorkshire Council","East Staffordshire Borough Council",
-    "East Suffolk Council","East Sussex County Council","Eastbourne Borough Council",
-    "Eastleigh Borough Council","Eden District Council","Edinburgh City Council",
-    "Elmbridge Borough Council","Enfield Council","Epping Forest District Council",
-    "Epsom and Ewell Borough Council","Erewash Borough Council",
-    "Exeter City Council","Falkirk Council","Fareham Borough Council",
-    "Fenland District Council","Fermanagh and Omagh District Council","Fife Council",
-    "Flintshire County Council","Folkestone and Hythe District Council",
-    "Forest of Dean District Council","Forth Valley Council","Foyle District Council",
-    "Fylde Borough Council","Gateshead Metropolitan Borough Council",
-    "Gedling Borough Council","Glasgow City Council","Glenavy and Crumlin District Council",
-    "Gloucester City Council","Gosport Borough Council",
-    "Gravesham Borough Council","Great Yarmouth Borough Council",
-    "Greenwich Council","Guildford Borough Council","Gwynedd Council",
-    "Hackney Council","Halton Borough Council","Hambleton District Council",
-    "Hammersmith and Fulham Council","Haringey Council","Harrow Council",
-    "Hart District Council","Hartlepool Borough Council","Hastings Borough Council",
-    "Havering Council","Hertfordshire County Council","High Peak Borough Council",
-    "Highland Council","Hillingdon Council",
-    "Hinckley and Bosworth Borough Council","Horsham District Council",
-    "Hounslow Council","Hull City Council",
-    "Inverclyde Council","Ipswich Borough Council",
-    "Isle of Anglesey County Council","Isle of Wight Council",
-    "Isles of Scilly Council","Islington Council",
-    "Kensington and Chelsea Council","Kettering Borough Council",
-    "King's Lynn and West Norfolk Council","Kingston upon Hull City Council",
-    "Kingston upon Thames Council","Kirklees Council",
-    "Knowsley Metropolitan Borough Council","Lambeth Council",
-    "Lancaster City Council","Leeds City Council",
-    "Leicester City Council","Leicestershire County Council",
-    "Lewes District Council","Lewisham Council",
-    "Lincoln City Council","Lisburn and Castlereagh Council",
-    "Liverpool City Council","Luton Borough Council",
-    "Manchester City Council","Mansfield District Council",
-    "Medway Council","Merton Council","Mid Devon District Council",
-    "Mid Suffolk District Council","Milton Keynes City Council",
-    "Monmouthshire County Borough Council","Moray Council",
-    "Newcastle City Council","New Forest District Council",
-    "Newark and Sherwood District Council",
-    "Newry Mourne and Down District Council",
-    "Newtownabbey Borough Council","Norfolk County Council",
-    "North Ayrshire Council","North East Lincolnshire Council",
-    "North Lanarkshire Council","North Lincolnshire Council",
-    "North Somerset Council","North Tyneside Council",
-    "Northumberland County Council","North Warwickshire Borough Council",
-    "North Yorkshire Council","Nottingham City Council",
-    "Nuneaton and Bedworth Borough Council",
-    "Oadby and Wigston Borough Council","Oldham Council",
-    "Orkney Islands Council","Oxford City Council",
-    "Pembrokeshire County Council","Perth and Kinross Council",
-    "Peterborough City Council","Plymouth City Council",
-    "Poole Borough Council","Portsmouth City Council",
-    "Powys County Council","Reading Borough Council",
-    "Redbridge Council","Redcar and Cleveland Borough Council",
-    "Redditch Borough Council","Renfrewshire Council",
-    "Richmondshire District Council","Richmond upon Thames Council",
-    "Rochdale Borough Council","Rotherham Metropolitan Borough Council",
-    "Royal Borough of Greenwich","Royal Borough of Kingston upon Thames",
-    "Royal Borough of Kensington and Chelsea",
-    "Royal Borough of Windsor and Maidenhead","Rugby Borough Council",
-    "Ryedale District Council","Salford City Council",
-    "Sandwell Metropolitan Borough Council","Scarborough Borough Council",
-    "Scottish Borders Council","Sefton Council","Selby District Council",
-    "Sheffield City Council","Shropshire Council","Slough Borough Council",
-    "Solihull Metropolitan Borough Council","Somerset Council",
-    "South Ayrshire Council","South Bucks District Council",
-    "South Cambridgeshire District Council","South Derbyshire District Council",
-    "South Gloucestershire Council","South Hams District Council",
-    "South Holland District Council","South Lanarkshire Council",
-    "South Northamptonshire Council","South Oxfordshire District Council",
-    "South Ribble Borough Council","South Somerset District Council",
-    "South Tyneside Council","Southend-on-Sea City Council",
-    "Spelthorne Borough Council","St. Albans City & District Council",
-    "Stafford Borough Council","Staffordshire County Council",
-    "Stirling Council","Stockport Metropolitan Borough Council",
-    "Stoke-on-Trent City Council","Strabane District Council",
-    "Stratford-on-Avon District Council","Stroud District Council",
-    "Sunderland City Council","Surrey County Council","Sutton Council",
-    "Swale Borough Council","Swansea Council",
-    "Swindon Borough Council","Tameside Metropolitan Borough Council",
-    "Tamworth Borough Council","Telford and Wrekin Council",
-    "Thanet District Council","Three Rivers District Council","Torbay Council",
-    "Torfaen County Borough Council","Tower Hamlets Council",
-    "Trafford Council","Tyrone District Council",
-    "Vale of Glamorgan Council","Wakefield Council",
-    "Walsall Metropolitan Borough Council","Waltham Forest Council",
-    "Wandsworth Council","Warwick District Council","Watford Borough Council",
-    "Wealden District Council","Wellingborough Borough Council",
-    "West Berkshire Council","West Devon Borough Council",
-    "West Dunbartonshire Council","West Lancashire Council",
-    "West Lothian Council","West Oxfordshire District Council",
-    "West Somerset Council","West Suffolk Council",
-    "Westminster City Council","Wigan Council",
-    "Wiltshire Council","Windsor and Maidenhead",
-    "Wirral Council","Wokingham Borough Council",
-    "Wolverhampton City Council","Worcestershire County Council",
-    "Wrexham County Borough Council","York City Council"
-  ];
-
-  const listEl = document.getElementById('councilList');
-  const searchInput = document.getElementById('councilSearch');
-
-  function slugify(name) {
-    return name.toLowerCase()
-      .replace(/ & /g, '-and-')
-      .replace(/[\s,'’]+/g, '-')
-      .replace(/[^\w-]/g, '');
-  }
-
-  function renderList(items) {
-    listEl.innerHTML = '';
-    items.forEach(name => {
-      const li = document.createElement('li');
-      li.textContent = name;
-      li.onclick = () => {
-        window.location.href = 'councils/' + slugify(name) + '.html';
-      };
-      listEl.appendChild(li);
-    });
-  }
-
-  searchInput.addEventListener('input', () => {
-    const term = searchInput.value.trim().toLowerCase();
-    renderList(councils.filter(c => c.toLowerCase().includes(term)));
-  });
-
-  renderList(councils);
-</script>
-
-<div class="section">
-  <h2>Why It’s Important to Know Your Council</h2>
-  <p>Every local authority in the UK has a legal duty to maintain safe and habitable homes for its tenants. If you're living in social housing or council-provided accommodation, your local council is responsible for ensuring that repairs are handled promptly and that your living conditions meet health and safety standards. Issues like mould, damp, leaks, broken heating, or structural damage are not just inconveniences — they may be considered legal disrepair.</p>
-  <p>By finding your council using our search tool, you can take the first step toward holding them accountable and protecting your rights as a tenant. <a href="how-it-works.html">Learn how housing disrepair claims work here</a>.</p>
-  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start My Disrepair Claim</a>
-</div>
-
-<div class="section">
-  <h2>How Housing Disrepair Affects Your Health</h2>
-  <p>Living with damp, mould, or broken facilities can have a serious impact on your wellbeing. Many tenants suffer from respiratory issues, anxiety, and stress due to unresolved disrepair. Councils and housing associations must address these risks — and if they don’t, you may be eligible to claim compensation or force the repairs to be done.</p>
-  <p>Common symptoms of housing disrepair include:</p>
-  <ul>
-    <li>Persistent cold and condensation inside the home</li>
-    <li>Mould-related breathing problems or allergies</li>
-    <li>Leaks causing damage to walls, ceilings or electrics</li>
-    <li>Lack of hot water or heating during cold months</li>
-  </ul>
-  <p>Learn more about <a href="claim-types.html">different types of housing disrepair claims</a>.</p>
-  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Check If I Qualify</a>
-</div>
-
-<div class="section">
-  <h2>What If My Council Ignores Me?</h2>
-  <p>Many tenants report chasing their council for months or even years with no progress. If you've reported issues and your landlord hasn’t fixed them within a reasonable time, you have legal options. Housing disrepair claims help you take back control, get repairs completed, and potentially receive compensation for distress or inconvenience.</p>
-  <p>We work with professional firms who handle council complaints and legal processes for you. Whether it’s damp, leaks, faulty electrics, or unsafe living conditions, our experts will support your case.</p>
-  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Speak To A Specialist</a>
-</div>
-
-<div class="section">
-  <h2>Can I Still Claim If I’m On Benefits?</h2>
-  <p>Yes. Being on Universal Credit, Housing Benefit, or other forms of support does not stop you from making a housing disrepair claim. In fact, many people in social housing are eligible. These claims are usually no-win, no-fee, meaning you don’t need to pay anything upfront to begin the process.</p>
-  <p>Whether you’re on a low income or out of work, you still deserve a safe home. <a href="faq.html">Read our FAQs</a> for more help on claiming while on benefits.</p>
-  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Start Claim Now</a>
-</div>
-
-<div class="section">
-  <h2>Need Help With Rent Arrears Too?</h2>
-  <p>Many tenants struggling with housing disrepair are also behind on rent. If your council hasn’t fixed your property, they may still be chasing you for arrears — even if the issues caused damage or made parts of your home unliveable. This is unfair, and you may have legal grounds to defend yourself.</p>
-  <p>In some cases, we can also help you explore solutions for rent debt and other bills. If you have debts piling up, check out our sister site <a href=\"https://freshstartdebtsupport.co.uk\">Fresh Start Debt Support</a> for help with council tax, credit cards, and more.</p>
-  <a href="https://form.jotform.com/250594347028056" class="menu-cta">Take The First Step</a>
-</div>
-
-  </div> <!-- end container -->
-  <footer>
-    © 2025 Home Justice Solutions. All rights reserved.<br />
-    We are not a firm of solicitors. We connect tenants with housing disrepair specialists. This website does not provide legal advice.
-  </footer>
-
+  
 </body>
 </html>
